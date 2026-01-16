@@ -3,6 +3,13 @@ import { products } from '@/data/products';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Generate static params for all products at build time
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    slug: product.slug,
+  }));
+}
+
 export default async function ProductDetailPage({
   params,
 }: {
@@ -25,13 +32,13 @@ export default async function ProductDetailPage({
             {/* Image Placeholder - Carousel to be implemented */}
             <div className="flex-1">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-stone-100 dark:bg-stone-800">
-                 <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover object-center"
-                    priority
-                  />
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
               </div>
             </div>
 
