@@ -55,7 +55,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 <section>
                     <h3 className="text-xl font-medium text-white mb-6">Key Features</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {product.features.map((feature, idx) => (
+                        {product.features?.map((feature, idx) => (
                             <GlassCard key={idx} className="p-4 flex items-start gap-3">
                                 <div className="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
                                     <Check className="w-3 h-3" />
@@ -83,7 +83,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                         <div className="pt-8 border-t border-white/10">
                             <h4 className="text-lg font-serif text-white mb-6">Technical Specifications</h4>
                             <dl className="space-y-4 text-sm">
-                                {Object.entries(product.specs).map(([key, value]) => (
+                                {product.specs && Object.entries(product.specs).map(([key, value]) => (
                                     <div key={key} className="grid grid-cols-2 gap-4 border-b border-white/5 pb-2 last:border-0">
                                         <dt className="font-medium text-stone-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
                                         <dd className="text-stone-300 text-right">{value}</dd>

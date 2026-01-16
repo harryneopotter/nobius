@@ -23,7 +23,7 @@ export function GlassCard({ children, className, hoverEffect = false, ...props }
       {...props}
     >
       {/* Noise texture overlay for texture */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.03] bg-[url('/noise.svg')]" />
 
       {/* Subtle gradient glow */}
       <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
