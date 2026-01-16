@@ -11,7 +11,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <Link href={`/products/${product.slug}`} className="group block h-full">
       <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white transition-all duration-300 hover:border-stone-300 hover:shadow-lg dark:border-stone-800 dark:bg-stone-900/50 dark:hover:border-stone-700">
         {/* Image Placeholder */}
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100 dark:bg-stone-800">
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100 p-1 dark:bg-stone-800">
           <Image
             src={product.image}
             alt={product.name}

@@ -31,7 +31,7 @@ export default async function ProductDetailPage({
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
             {/* Image Placeholder - Carousel to be implemented */}
             <div className="flex-1">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-stone-100 dark:bg-stone-800">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-stone-100 p-1 dark:bg-stone-800">
                 <Image
                   src={product.image}
                   alt={product.name}
