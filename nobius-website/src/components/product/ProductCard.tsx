@@ -16,7 +16,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             src={product.image}
             alt={product.name}
             fill
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5 dark:group-hover:bg-white/5" />
         </div>

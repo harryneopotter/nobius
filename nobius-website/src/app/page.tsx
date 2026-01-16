@@ -40,7 +40,7 @@ export default function Home() {
                 src="/images/products/s1-2.png"
                 alt="S1-2 Nearfield Monitor"
                 fill
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                className="object-contain object-center transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />

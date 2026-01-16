@@ -36,7 +36,7 @@ export default async function ProductDetailPage({
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                   priority
                 />
               </div>
