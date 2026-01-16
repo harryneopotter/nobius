@@ -1,171 +1,102 @@
-import { notFound } from 'next/navigation';
-import { products } from '@/data/products';
-import Link from 'next/link';
-import Image from 'next/image';
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { products } from "@/data/products";
+import { Button } from "@/components/ui/Button";
+import { GlassCard } from "@/components/ui/GlassCard";
+import { ArrowLeft, Check, ShoppingBag } from "lucide-react";
 
-export default async function ProductDetailPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  // Await the params before accessing them
-  const resolvedParams = await params;
-  const product = products.find((p) => p.slug === resolvedParams.slug);
+// This is a server component by default in App Router
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
 
   if (!product) {
     notFound();
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-black">
-      {/* Hero Section */}
-      <section className="bg-white py-16 dark:bg-stone-900/20 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
-            {/* Image Placeholder - Carousel to be implemented */}
-            <div className="flex-1">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-stone-100 dark:bg-stone-800">
-                 <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover object-center"
-                    priority
-                  />
-              </div>
-            </div>
+    <div className="relative min-h-screen">
+      {/* Immersive Header / Hero */}
+      <div className="relative h-[70vh] w-full overflow-hidden">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent" />
 
-            {/* Product Info */}
-            <div className="flex-1 space-y-8">
-              <div>
-                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400">
-                  {product.category}
-                </p>
-                <h1 className="font-serif text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100 md:text-5xl lg:text-6xl">
-                  {product.name}
-                </h1>
-                <p className="mt-2 text-xl font-medium italic text-stone-500 dark:text-stone-400">
-                  {product.tagline}
-                </p>
-              </div>
-
-              <div className="space-y-6 text-lg leading-relaxed text-stone-600 dark:text-stone-300">
-                <p>{product.description}</p>
-                {product.longDescription && <p>{product.longDescription}</p>}
-              </div>
-
-              <div className="flex items-center justify-between border-t border-stone-200 py-6 dark:border-stone-800">
-                <span className="text-3xl font-bold text-stone-900 dark:text-stone-100">
-                  {product.price}
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-stone-900 px-8 text-sm font-medium text-white transition-colors hover:bg-stone-800 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200"
-                >
-                  Request a Quote
+        <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 lg:p-24 flex items-end">
+            <div className="max-w-4xl space-y-4">
+                <Link href="/products" className="inline-flex items-center text-sm font-medium text-stone-400 hover:text-white transition-colors mb-4">
+                    <ArrowLeft className="w-4 h-4 mr-2" /> Back to Collection
                 </Link>
-                <button
-                  className="inline-flex h-12 items-center justify-center rounded-full border border-stone-200 px-8 text-sm font-medium text-stone-900 transition-colors hover:bg-stone-50 dark:border-stone-800 dark:text-stone-100 dark:hover:bg-stone-900"
-                >
-                  Download Technical Sheet
-                </button>
-              </div>
+                <h1 className="text-6xl md:text-8xl font-serif text-white tracking-tight">{product.name}</h1>
+                <p className="text-xl md:text-2xl text-stone-200 font-light tracking-wide max-w-2xl">{product.tagline}</p>
             </div>
-          </div>
         </div>
-      </section>
+      </div>
 
-      {/* Technical Specifications */}
-      <section className="container mx-auto max-w-4xl px-4 py-16 md:px-6 md:py-24">
-        <div className="mb-12 text-center">
-          <h2 className="font-serif text-3xl font-bold text-stone-900 dark:text-stone-100">
-            Technical Specifications
-          </h2>
-          <p className="mt-4 text-stone-600 dark:text-stone-400">
-            Precision engineering in every detail.
-          </p>
-        </div>
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
 
-        <div className="overflow-hidden rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900/50">
-          <table className="w-full text-left text-sm">
-            <tbody className="divide-y divide-stone-100 dark:divide-stone-800">
-              {product.specs?.frequencyResponse && (
-                <tr className="group transition-colors hover:bg-stone-50 dark:hover:bg-stone-900">
-                  <th className="w-1/3 px-6 py-4 font-medium text-stone-900 dark:text-stone-100">
-                    Frequency Response
-                  </th>
-                  <td className="px-6 py-4 text-stone-600 dark:text-stone-400">
-                    {product.specs.frequencyResponse}
-                  </td>
-                </tr>
-              )}
-              {product.specs?.sensitivity && (
-                <tr className="group transition-colors hover:bg-stone-50 dark:hover:bg-stone-900">
-                  <th className="w-1/3 px-6 py-4 font-medium text-stone-900 dark:text-stone-100">
-                    Sensitivity
-                  </th>
-                  <td className="px-6 py-4 text-stone-600 dark:text-stone-400">
-                    {product.specs.sensitivity}
-                  </td>
-                </tr>
-              )}
-              {product.specs?.impedance && (
-                <tr className="group transition-colors hover:bg-stone-50 dark:hover:bg-stone-900">
-                  <th className="w-1/3 px-6 py-4 font-medium text-stone-900 dark:text-stone-100">
-                    Nominal Impedance
-                  </th>
-                  <td className="px-6 py-4 text-stone-600 dark:text-stone-400">
-                    {product.specs.impedance}
-                  </td>
-                </tr>
-              )}
-              {product.specs?.cabinetType && (
-                <tr className="group transition-colors hover:bg-stone-50 dark:hover:bg-stone-900">
-                  <th className="w-1/3 px-6 py-4 font-medium text-stone-900 dark:text-stone-100">
-                    Cabinet Architecture
-                  </th>
-                  <td className="px-6 py-4 text-stone-600 dark:text-stone-400">
-                    {product.specs.cabinetType}
-                  </td>
-                </tr>
-              )}
-              {product.specs?.drivers && (
-                <tr className="group transition-colors hover:bg-stone-50 dark:hover:bg-stone-900">
-                  <th className="w-1/3 px-6 py-4 font-medium text-stone-900 dark:text-stone-100">
-                    Drivers
-                  </th>
-                  <td className="px-6 py-4 text-stone-600 dark:text-stone-400">
-                    {product.specs.drivers}
-                  </td>
-                </tr>
-              )}
-              {product.specs?.dimensions && (
-                <tr className="group transition-colors hover:bg-stone-50 dark:hover:bg-stone-900">
-                  <th className="w-1/3 px-6 py-4 font-medium text-stone-900 dark:text-stone-100">
-                    Dimensions (H x W x D)
-                  </th>
-                  <td className="px-6 py-4 text-stone-600 dark:text-stone-400">
-                    {product.specs.dimensions}
-                  </td>
-                </tr>
-              )}
-              {product.specs?.weight && (
-                <tr className="group transition-colors hover:bg-stone-50 dark:hover:bg-stone-900">
-                  <th className="w-1/3 px-6 py-4 font-medium text-stone-900 dark:text-stone-100">
-                    Weight
-                  </th>
-                  <td className="px-6 py-4 text-stone-600 dark:text-stone-400">
-                    {product.specs.weight}
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+            {/* Main Content */}
+            <div className="lg:col-span-7 space-y-12">
+                <section>
+                    <h2 className="text-3xl font-serif text-white mb-6">The Design Philosophy</h2>
+                    <p className="text-lg text-stone-300 leading-relaxed whitespace-pre-line">
+                        {product.longDescription || product.description}
+                    </p>
+                </section>
+
+                <section>
+                    <h3 className="text-xl font-medium text-white mb-6">Key Features</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {product.features.map((feature, idx) => (
+                            <GlassCard key={idx} className="p-4 flex items-start gap-3">
+                                <div className="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
+                                    <Check className="w-3 h-3" />
+                                </div>
+                                <span className="text-stone-300 text-sm">{feature}</span>
+                            </GlassCard>
+                        ))}
+                    </div>
+                </section>
+            </div>
+
+            {/* Sticky Sidebar / Specs */}
+            <div className="lg:col-span-5">
+                <div className="sticky top-32 space-y-8">
+                     <GlassCard className="p-8 space-y-8">
+                        <div>
+                            <p className="text-sm font-semibold uppercase tracking-widest text-stone-500 mb-1">Price Pair</p>
+                            <p className="text-4xl font-serif text-white">{product.price}</p>
+                        </div>
+
+                        <Button className="w-full" size="lg">
+                            Add to Cart <ShoppingBag className="ml-2 w-5 h-5" />
+                        </Button>
+
+                        <div className="pt-8 border-t border-white/10">
+                            <h4 className="text-lg font-serif text-white mb-6">Technical Specifications</h4>
+                            <dl className="space-y-4 text-sm">
+                                {Object.entries(product.specs).map(([key, value]) => (
+                                    <div key={key} className="grid grid-cols-2 gap-4 border-b border-white/5 pb-2 last:border-0">
+                                        <dt className="font-medium text-stone-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
+                                        <dd className="text-stone-300 text-right">{value}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+                        </div>
+                     </GlassCard>
+                </div>
+            </div>
+
         </div>
-      </section>
+      </div>
     </div>
   );
 }
