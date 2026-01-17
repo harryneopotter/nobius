@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-stone-200 bg-white/80 backdrop-blur-md dark:border-stone-800 dark:bg-black/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="relative h-10 w-36">
+        <Link href="/" className="relative h-12 w-48">
           <Image
             src="/images/logo.png"
             alt="Nobius Audio"
