@@ -1,11 +1,18 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-stone-200 bg-white/80 backdrop-blur-md dark:border-stone-800 dark:bg-black/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="text-xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-100">
-          Nobius Audio
+        <Link href="/" className="relative h-10 w-36">
+          <Image
+            src="/images/logo.png"
+            alt="Nobius Audio"
+            fill
+            className="object-contain object-left"
+            priority
+          />
         </Link>
         <nav className="hidden gap-6 md:flex">
           <Link href="/" className="text-sm font-medium text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100">
@@ -23,7 +30,7 @@ const Header = () => {
         </nav>
         {/* Mobile menu placeholder - can be implemented later with state */}
         <div className="md:hidden">
-            <span className="text-sm text-stone-500">Menu</span>
+          <span className="text-sm text-stone-500">Menu</span>
         </div>
       </div>
     </header>
