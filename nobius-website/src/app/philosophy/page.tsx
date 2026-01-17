@@ -1,9 +1,19 @@
+import Image from 'next/image';
+
 export default function PhilosophyPage() {
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-black">
       {/* Hero Section */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-stone-900 py-24 text-center">
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Background Image */}
+        <Image
+          src="/images/hero-option.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-50"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight text-white md:text-7xl">
             Imperfectly Honest.
@@ -57,14 +67,14 @@ export default function PhilosophyPage() {
               </p>
             </div>
           </div>
-          
-           <div className="prose prose-lg mx-auto dark:prose-invert">
+
+          <div className="prose prose-lg mx-auto dark:prose-invert">
             <h2 className="font-serif text-3xl font-bold text-stone-900 dark:text-stone-100">
-               Hand-Built for You
+              Hand-Built for You
             </h2>
-             <p className="text-stone-600 dark:text-stone-300">
-               Every pair of Nobius speakers is assembled by hand, tested, and matched to ensure they meet our rigorous standards. 
-               We don't chase the lowest price point; we chase the highest possible connection between you and your music.
+            <p className="text-stone-600 dark:text-stone-300">
+              Every pair of Nobius speakers is assembled by hand, tested, and matched to ensure they meet our rigorous standards.
+              We don't chase the lowest price point; we chase the highest possible connection between you and your music.
             </p>
           </div>
         </div>
