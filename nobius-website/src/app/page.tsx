@@ -33,20 +33,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex-1">
-          <Link href="/products/s1-2">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-stone-800 bg-gradient-to-br from-stone-900 to-black group cursor-pointer">
+        <section className="flex-1 flex justify-center">
+          <Link href="/products/s1-2" className="group block w-full">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl shadow-2xl shadow-black/50 transition-transform duration-500 group-hover:scale-[1.02]">
               <Image
-                src="/images/products/s1-2.png"
-                alt="S1-2 Nearfield Monitor"
+                src="/images/products/s1-2-hero.png"
+                alt="S1-2 Nearfield Monitors"
                 fill
-                className="object-contain object-center transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                className="object-cover object-center"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 space-y-1 text-xs text-stone-300">
-                <p className="font-semibold tracking-wide text-stone-200">S1-2 Nearfield Monitor</p>
-                <p className="text-[11px] uppercase tracking-[0.2em] text-stone-400">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 pt-20">
+                <p className="font-semibold tracking-wide text-stone-100 text-lg">S1-2 Nearfield Monitor</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-stone-400">
                   Starter Stereo, Vintage Soul
                 </p>
               </div>

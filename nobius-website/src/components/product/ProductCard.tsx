@@ -10,15 +10,14 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Link href={`/products/${product.slug}`} className="group block h-full">
       <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white transition-all duration-300 hover:border-stone-300 hover:shadow-lg dark:border-stone-800 dark:bg-stone-900/50 dark:hover:border-stone-700">
-        {/* Image Placeholder */}
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100 p-1 dark:bg-stone-800">
+        {/* Image */}
+        <div className="relative aspect-square w-full overflow-hidden rounded-t-2xl bg-stone-900">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
+            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5 dark:group-hover:bg-white/5" />
         </div>
 
         {/* Content */}

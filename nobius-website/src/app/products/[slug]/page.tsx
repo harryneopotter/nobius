@@ -29,14 +29,14 @@ export default async function ProductDetailPage({
       <section className="bg-white py-16 dark:bg-stone-900/20 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
-            {/* Image Placeholder - Carousel to be implemented */}
-            <div className="flex-1">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-stone-100 p-1 dark:bg-stone-800">
+            {/* Product Image */}
+            <div className="flex-1 flex justify-center">
+              <div className="relative aspect-square w-full max-w-lg overflow-hidden rounded-2xl shadow-2xl bg-stone-900">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-contain object-center"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
