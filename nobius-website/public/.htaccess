@@ -1,31 +1,28 @@
-# Disable directory browsing
-Options -Indexes
-
 # Set default index file
 DirectoryIndex index.html
 
 # Enable Rewrite Engine
 RewriteEngine On
-# Redirect trailing slashes to non-trailing (optional, for consistency)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
 
-# If the requested file or directory exists, serve it directly
-RewriteCond %{REQUEST_FILENAME} -f [OR]
+# If directory exists, serve its index.html
 RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ $1/index.html [L]
+
+# If the requested file exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
 # For HTML files without extension
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# Handle dynamic routes - rewrite to the corresponding HTML file
+# Handle dynamic product routes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^products/([^/]+)/?$ /products/$1.html [L]
 
-# Fallback for SPA routes - serve index.html for unmatched routes
+# Fallback - serve index.html for unmatched routes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ /index.html [L]
@@ -37,10 +34,8 @@ RewriteRule ^ /index.html [L]
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
 # Enable GZIP compression
