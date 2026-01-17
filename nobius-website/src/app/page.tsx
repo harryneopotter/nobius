@@ -37,7 +37,7 @@ export default function Home() {
           <Link href="/products/s1-2" className="group block w-full">
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl shadow-2xl shadow-black/50 transition-transform duration-500 group-hover:scale-[1.02]">
               <Image
-                src="/images/products/s1-2-hero.png"
+                src="/images/products/s1-2-hero.jpg"
                 alt="S1-2 Nearfield Monitors"
                 fill
                 className="object-cover object-center"

@@ -31,7 +31,7 @@ export const products: Product[] = [
     description: 'A 12.7L sealed monitor designed for the nearfield. Delivers fast transient response and tight bass control without port noise.',
     longDescription: 'The S1-2 is built on the belief that desktop audio shouldn\'t be an afterthought. By utilizing a 12.7-liter sealed enclosure, we prioritize transient speed and bass texture over artificial boominess. The phase-coherent crossover ensures a stable stereo image even at close listening distances.',
     price: '$899',
-    image: '/images/products/s1-2.png',
+    image: '/images/products/s1-2.jpg',
     category: 'Monitor',
     features: ['Sealed Cabinet Architecture', 'Phase-Coherent Crossover', 'Warm / Reference Voicing Switch'],
     specs: {
@@ -52,7 +52,7 @@ export const products: Product[] = [
     description: 'Our premium compact bookshelf speaker. Engineered for transparency and emotional connection in smaller listening spaces.',
     longDescription: 'The N1-9 is the purest expression of the Nobius philosophy. It vanishes into the room, leaving only the music. Every component, from the crossover capacitors to the cabinet bracing, is selected to reduce coloration and enhance micro-dynamics.',
     price: '$1,299',
-    image: '/images/products/n1-9.png',
+    image: '/images/products/n1-9.jpg',
     category: 'Bookshelf',
     features: ['Premium Drivers', 'Hand-Finished Walnut Veneer', 'Reference Quality Crossover Components'],
     specs: {
@@ -73,7 +73,7 @@ export const products: Product[] = [
     description: 'A contemporary bookshelf design with extended low-end response for a fuller, more energetic presentation.',
     longDescription: 'For those who want the Nobius clarity but need more impact. The N2-5 features a larger cabinet volume and a high-excursion woofer, making it capable of filling medium-sized rooms with ease.',
     price: '$1,599',
-    image: '/images/products/n2-5.png',
+    image: '/images/products/n2-5.jpg',
     category: 'Bookshelf',
     features: ['Extended Bass Response', 'Modern Voicing', 'High Dynamic Range'],
     specs: {
@@ -94,7 +94,7 @@ export const products: Product[] = [
     description: 'A dedicated bass module that transforms the N1-9 into a full-range 3-way system.',
     longDescription: 'The N1-9B isn\'t just a subwoofer; it\'s the bottom half of a full-range system. Designed to sit perfectly beneath the N1-9, it integrates seamlessly via an active crossover, relieving the main speakers of bass duties for improved clarity.',
     price: '$999',
-    image: '/images/products/n1-9b.png',
+    image: '/images/products/n1-9b.jpg',
     category: 'Bass Module',
     features: ['Active Crossover Integration', 'Seamless Design Match', 'Deep Lows to 28Hz'],
     specs: {

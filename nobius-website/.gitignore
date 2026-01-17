@@ -43,3 +43,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# source assets (original images, use public/ for web)
+/src/assets/
+/images/
