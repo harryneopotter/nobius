@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { AnalyticsInit } from "@/components/AnalyticsInit";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
       >
+        <AnalyticsInit />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
