@@ -1,0 +1,79 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { products } from '@/data/products';
+
+const tools = products.filter(p => p.category === 'Audio Tools' || p.category === 'Tool');
+// Ensure category match. Script output 'Tool' might be mapped to 'Audio Tools' or just 'Tool'.
+// In extract script: category: p[2] === 'Speaker' ? 'Speakers' : (p[2] === 'Stand' ? 'Stands' : 'Audio Tools')
+// So it should be 'Audio Tools'.
+
+export default function AudioToolsPage() {
+    return (
+        <div className="flex flex-col min-h-screen bg-stone-950">
+            <section className="relative h-[50vh] w-full overflow-hidden flex items-center justify-center bg-stone-900 border-b border-stone-800">
+                <div className="text-center px-4 z-10">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="font-serif text-5xl font-medium text-white md:text-7xl"
+                    >
+                        Audio Tools
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="mt-6 max-w-xl mx-auto text-lg text-stone-400"
+                    >
+                        Essential accessories for the dedicated listener.
+                    </motion.p>
+                </div>
+            </section>
+
+            <section className="container mx-auto px-4 py-24">
+                <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+                    {tools.map((product, idx) => (
+                        <motion.div
+                            key={product.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1 }}
+                        >
+                            <Link href={`/products/${product.slug}`} className="group block h-full">
+                                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-stone-900 mb-6">
+                                    <div className="absolute inset-0 flex items-center justify-center text-stone-700">
+                                        <span className="text-lg">Image: {product.name}</span>
+                                    </div>
+                                    <Image
+                                        src={product.image}
+                                        alt={product.name}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-serif font-medium text-white mb-2 group-hover:text-stone-300">
+                                        {product.name}
+                                    </h3>
+                                    <p className="text-stone-400">
+                                        {product.description}
+                                    </p>
+                                </div>
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+                {tools.length === 0 && (
+                    <div className="text-center text-stone-500 py-12">
+                        No tools currently listed. Check back soon.
+                    </div>
+                )}
+            </section>
+        </div>
+    );
+}

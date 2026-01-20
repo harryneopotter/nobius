@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nobius Audio</title>
+    <meta name="description"
+        content="Get in touch with Nobius Audio. Questions, custom configurations, or just want to talk frequency response curves.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Contact page specific styles */
+        .contact-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 1024px) {
+            .contact-page {
+                flex-direction: row;
+            }
+        }
+
+        .contact-bg-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-display);
+            font-size: clamp(10rem, 18vw, 18rem);
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.04);
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+            z-index: 0;
+            filter: blur(2px);
+        }
+
+        body.dark-mode .contact-bg-text {
+            color: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Info Section */
+        .contact-info {
+            flex: 0 0 auto;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (min-width: 1024px) {
+            .contact-info {
+                flex: 0 0 42%;
+                padding: 4rem;
+            }
+        }
+
+        .contact-info-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .contact-info-card {
+            background: rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-accent-bar {
+            width: 2rem;
+            height: 4px;
+            background: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-intro {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-detail-label {
+            display: block;
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail-value {
+            font-size: 0.875rem;
+        }
+
+        .contact-detail-link {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: var(--color-primary);
+            transition: all var(--transition-fast);
+        }
+
+        .contact-detail-link:hover {
+            background: var(--color-primary);
+            color: #000;
+            padding: 0.25rem;
+            margin: -0.25rem;
+            text-decoration: none;
+        }
+
+        /* Form Section */
+        .contact-form-section {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (min-width: 1024px) {
+            .contact-form-section {
+                padding: 4rem;
+            }
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(240, 240, 240, 0.9);
+            backdrop-filter: blur(8px);
+            padding: 2.5rem;
+            border-left: 4px solid var(--color-primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        body.dark-mode .contact-form {
+            background: rgba(30, 30, 30, 0.9);
+        }
+
+        .contact-form-corner {
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .contact-form-corner--tr {
+            top: -2px;
+            right: -2px;
+            border-top: 2px solid var(--color-text-dark);
+            border-right: 2px solid var(--color-text-dark);
+        }
+
+        .contact-form-corner--bl {
+            bottom: -2px;
+            left: -2px;
+            border-bottom: 2px solid var(--color-text-dark);
+            border-left: 2px solid var(--color-text-dark);
+        }
+
+        body.dark-mode .contact-form-corner--tr,
+        body.dark-mode .contact-form-corner--bl {
+            border-color: var(--color-text-light);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+            transition: color var(--transition-fast);
+        }
+
+        .form-group:focus-within .form-label {
+            color: var(--color-primary);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 0.5rem 0;
+            font-family: inherit;
+            font-size: 0.875rem;
+            color: inherit;
+            transition: border-color var(--transition-fast);
+            border-radius: 0;
+        }
+
+        body.dark-mode .form-input,
+        body.dark-mode .form-select,
+        body.dark-mode .form-textarea {
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-bottom-color: var(--color-primary);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .form-input::placeholder,
+        body.dark-mode .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-select {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0 center;
+        }
+
+        .form-textarea {
+            resize: none;
+            min-height: 100px;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-status {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+        }
+
+        .form-submit {
+            background: var(--color-primary);
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            padding: 1rem 2rem;
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+            transition: all var(--transition-fast);
+        }
+
+        .form-submit:hover {
+            background: #fff;
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+            transform: translate(2px, 2px);
+        }
+
+        .form-submit:active {
+            box-shadow: none;
+            transform: translate(4px, 4px);
+        }
+
+        /* Coordinates */
+        .contact-coords {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+            z-index: 20;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .contact-coords {
+                display: block;
+            }
+        }
+
+        /* Corner decorations */
+        .corner-decor {
+            position: fixed;
+            width: 1rem;
+            height: 1rem;
+            z-index: 50;
+            opacity: 0.5;
+        }
+
+        .corner-decor::before,
+        .corner-decor::after {
+            content: '';
+            position: absolute;
+            background: currentColor;
+        }
+
+        .corner-decor--tl {
+            top: 2.5rem;
+            left: 2.5rem;
+        }
+
+        .corner-decor--tr {
+            top: 2.5rem;
+            right: 2.5rem;
+        }
+
+        .corner-decor--bl {
+            bottom: 2.5rem;
+            left: 2.5rem;
+        }
+
+        .corner-decor--br {
+            bottom: 2.5rem;
+            right: 2.5rem;
+        }
+
+        .corner-decor--tl::before,
+        .corner-decor--bl::before {
+            left: 0;
+            width: 2px;
+            height: 100%;
+        }
+
+        .corner-decor--tr::before,
+        .corner-decor--br::before {
+            right: 0;
+            width: 2px;
+            height: 100%;
+        }
+
+        .corner-decor--tl::after,
+        .corner-decor--tr::after {
+            top: 0;
+            height: 2px;
+            width: 100%;
+        }
+
+        .corner-decor--bl::after,
+        .corner-decor--br::after {
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-markers">
+                <div class="sidebar-marker" style="width: 8px; height: 24px;"></div>
+                <div class="sidebar-marker" style="width: 16px; height: 8px;"></div>
+            </div>
+
+            <a href="index.html" class="sidebar-brand">Nobius Audio</a>
+
+            <div class="sidebar-nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="philosophy.html">Our Philosophy</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+
+            <div class="sidebar-markers">
+                <div class="sidebar-marker" style="width: 16px; height: 8px;"></div>
+                <div class="sidebar-marker--primary" style="width: 8px; height: 24px;"></div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Background -->
+            <div class="bg-overlay bg-concrete" style="opacity: 0.6;"></div>
+            <div class="bg-overlay bg-grid" style="opacity: 0.4;"></div>
+
+            <!-- Corner Decorations -->
+            <div class="corner-decor corner-decor--tl"></div>
+            <div class="corner-decor corner-decor--tr"></div>
+            <div class="corner-decor corner-decor--bl"></div>
+            <div class="corner-decor corner-decor--br"></div>
+
+            <h1 class="contact-bg-text">CONTACT</h1>
+
+            <div class="contact-page">
+                <!-- Info Section -->
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-accent-bar"></div>
+                        <h2 class="contact-title">Let's Make<br>Noise.</h2>
+                        <p class="contact-intro">
+                            Questions about our engineering? Custom nearfield configurations?
+                            Or just want to talk about frequency response curves? We're listening.
+                        </p>
+                        <div class="contact-details">
+                            <div>
+                                <span class="contact-detail-label">HQ Location</span>
+                                <span class="contact-detail-value">
+                                    742 Industrial Ave, Sector 4<br>
+                                    Berlin, Germany
+                                </span>
+                            </div>
+                            <div>
+                                <span class="contact-detail-label">Direct Line</span>
+                                <a href="tel:+493055501990" class="contact-detail-value contact-detail-link">
+                                    +49 30 555 0199
+                                </a>
+                            </div>
+                            <div>
+                                <span class="contact-detail-label">Email</span>
+                                <a href="mailto:hello@nobiusaudio.com" class="contact-detail-value contact-detail-link">
+                                    hello@nobiusaudio.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="contact-form-section">
+                    <form class="contact-form" id="contact-form">
+                        <div class="contact-form-corner contact-form-corner--tr"></div>
+                        <div class="contact-form-corner contact-form-corner--bl"></div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Identification</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="YOUR NAME"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Signal Source</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="EMAIL ADDRESS" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label for="subject" class="form-label">Subject Vector</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject...</option>
+                                <option value="inquiry">General Inquiry</option>
+                                <option value="quote">Quote Request</option>
+                                <option value="support">Product Support</option>
+                                <option value="distribution">Distribution Partnership</option>
+                                <option value="press">Press / Media</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label for="message" class="form-label">Transmission Data</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="TYPE YOUR MESSAGE HERE..." required></textarea>
+                        </div>
+
+                        <div class="form-footer">
+                            <span class="form-status">Awaiting input...</span>
+                            <button type="submit" class="form-submit">Transmit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact-coords">Coordinates: 52.5200° N, 13.4050° E</div>
+        </main>
+    </div>
+
+    <script src="js/central-analytics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

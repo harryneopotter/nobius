@@ -1,11 +1,5 @@
 export interface ProductSpecs {
-  frequencyResponse?: string;
-  impedance?: string;
-  sensitivity?: string;
-  dimensions?: string;
-  weight?: string;
-  cabinetType?: string;
-  drivers?: string;
+  [key: string]: string;
 }
 
 export interface Product {
@@ -17,94 +11,185 @@ export interface Product {
   longDescription?: string;
   price: string;
   image: string;
-  category: 'Bookshelf' | 'Monitor' | 'Bass Module';
+  category: string;
   features: string[];
   specs: ProductSpecs;
 }
 
 export const products: Product[] = [
   {
-    id: 's1-2',
-    name: 'S1-2',
-    slug: 's1-2',
-    tagline: 'Starter Stereo, Vintage Soul',
-    description: 'A 12.7L sealed monitor designed for the nearfield. Delivers fast transient response and tight bass control without port noise.',
-    longDescription: 'The S1-2 is built on the belief that desktop audio shouldn\'t be an afterthought. By utilizing a 12.7-liter sealed enclosure, we prioritize transient speed and bass texture over artificial boominess. The phase-coherent crossover ensures a stable stereo image even at close listening distances.',
-    price: '$899',
-    image: '/images/products/s1-2.jpg',
-    category: 'Monitor',
-    features: ['Sealed Cabinet Architecture', 'Phase-Coherent Crossover', 'Warm / Reference Voicing Switch'],
-    specs: {
-      frequencyResponse: '55 Hz – 17 kHz (±3 dB)',
-      impedance: '8 Ohms Nominal',
-      sensitivity: '84-86 dB SPL (2.83V / 1m)',
-      dimensions: '340mm x 200mm x 260mm',
-      weight: '7.2 kg per speaker',
-      cabinetType: 'Sealed (Acoustic Suspension)',
-      drivers: '6.5" Paper Cone Woofer, 1" Silk Dome Tweeter',
-    },
+    "id": "n1-9",
+    "name": "N1-9",
+    "slug": "n1-9",
+    "tagline": "The Reference Monitor",
+    "description": "A BBC-inspired classic designed for absolute tonal honesty. The N1-9 vanishes into the room, leaving only the music.",
+    "longDescription": "Reference Voicing\nClassic, linear, and vocal-forward. A BBC-inspired monitor designed for long sessions, vintage sources, and honest midrange reproduction.",
+    "price": "$TBD",
+    "image": "/images/products/n1-9.jpg",
+    "category": "Speakers",
+    "features": ["BBC-inspired voicing", "Paper cone midrange", "Baltic Birch cabinet"],
+    "specs": {
+      "frequencyResponse": "45Hz - 20kHz (-3dB)",
+      "sensitivity": "87dB @ 1W/1m",
+      "impedance": "8 Ohms nominal",
+      "cabinetType": "Sealed (Acoustic Suspension)",
+      "drivers": "6.5\" Paper Cone Woofer, 1\" Silk Dome Tweeter",
+      "dimensions": "14\" H x 8\" W x 10\" D",
+      "weight": "18 lbs each"
+    }
   },
   {
-    id: 'n1-9',
-    name: 'N1-9',
-    slug: 'n1-9',
-    tagline: 'Natural. Refined. Intimate.',
-    description: 'Our premium compact bookshelf speaker. Engineered for transparency and emotional connection in smaller listening spaces.',
-    longDescription: 'The N1-9 is the purest expression of the Nobius philosophy. It vanishes into the room, leaving only the music. Every component, from the crossover capacitors to the cabinet bracing, is selected to reduce coloration and enhance micro-dynamics.',
-    price: '$1,299',
-    image: '/images/products/n1-9.jpg',
-    category: 'Bookshelf',
-    features: ['Premium Drivers', 'Hand-Finished Walnut Veneer', 'Reference Quality Crossover Components'],
-    specs: {
-      frequencyResponse: '48 Hz – 22 kHz (±3 dB)',
-      impedance: '6 Ohms Nominal',
-      sensitivity: '85 dB SPL',
-      dimensions: '320mm x 190mm x 280mm',
-      weight: '8.5 kg per speaker',
-      cabinetType: 'Rear Ported (Bass Reflex)',
-      drivers: '5.25" Mineral-Loaded Poly Cone, 1" Ceramic Dome',
-    },
+    "id": "n2-5",
+    "name": "N2-5",
+    "slug": "n2-5",
+    "tagline": "Modern Energy",
+    "description": "Clean, room-filling authority. An evolution of our sound with extended bass response and greater power handling.",
+    "longDescription": "Modern Balance\nClean, composed, and room-filling. A more refined evolution with increased scale, modern neutrality, and greater power handling.",
+    "price": "$TBD",
+    "image": "/images/products/n2-5.jpg",
+    "category": "Speakers",
+    "features": ["Modern neutral voicing", "Extended bass response", "High power handling"],
+    "specs": {
+      "frequencyResponse": "38Hz - 22kHz (-3dB)",
+      "sensitivity": "89dB @ 1W/1m",
+      "impedance": "6 Ohms nominal",
+      "cabinetType": "Ported (Bass Reflex)",
+      "drivers": "7\" Treated Paper Woofer, 1\" Beryllium Dome Tweeter",
+      "dimensions": "16\" H x 9\" W x 12\" D",
+      "weight": "24 lbs each"
+    }
   },
   {
-    id: 'n2-5',
-    name: 'N2-5',
-    slug: 'n2-5',
-    tagline: 'Contemporary Energy with Extended Bass',
-    description: 'A contemporary bookshelf design with extended low-end response for a fuller, more energetic presentation.',
-    longDescription: 'For those who want the Nobius clarity but need more impact. The N2-5 features a larger cabinet volume and a high-excursion woofer, making it capable of filling medium-sized rooms with ease.',
-    price: '$1,599',
-    image: '/images/products/n2-5.jpg',
-    category: 'Bookshelf',
-    features: ['Extended Bass Response', 'Modern Voicing', 'High Dynamic Range'],
-    specs: {
-      frequencyResponse: '42 Hz – 20 kHz (±3 dB)',
-      impedance: '4 Ohms Nominal',
-      sensitivity: '87 dB SPL',
-      dimensions: '380mm x 220mm x 310mm',
-      weight: '10.5 kg per speaker',
-      cabinetType: 'Rear Ported',
-      drivers: '7" Aluminum Cone Woofer, 1" Aluminum Dome Tweeter',
-    },
+    "id": "n1-9-bass",
+    "name": "N1-9 Bass",
+    "slug": "n1-9-bass",
+    "tagline": "Bass Extension Module",
+    "description": "Transforms the N1-9 into a full-range 3-way system. Adds weight and scale while preserving signature clarity.",
+    "longDescription": "Bass Extension Module\nA dedicated low-frequency foundation that transforms the N1-9 into a true three-way system. Adds weight, scale, and dynamic impact while preserving the N1-9's signature clarity.",
+    "price": "$TBD",
+    "image": "/images/products/n1-9b.png",
+    "category": "Speakers",
+    "features": ["Dedicated subwoofer module", "Matches N1-9 aesthetics", "Passive design"],
+    "specs": {
+      "frequencyResponse": "28Hz - 150Hz",
+      "sensitivity": "86dB @ 1W/1m",
+      "impedance": "4 Ohms nominal",
+      "cabinetType": "Sealed",
+      "drivers": "10\" Long-throw Woofer",
+      "dimensions": "20\" H x 12\" W x 14\" D",
+      "weight": "32 lbs"
+    }
   },
   {
-    id: 'n1-9b',
-    name: 'N1-9B',
-    slug: 'n1-9b',
-    tagline: 'The True 3-Way Transformation',
-    description: 'A dedicated bass module that transforms the N1-9 into a full-range 3-way system.',
-    longDescription: 'The N1-9B isn\'t just a subwoofer; it\'s the bottom half of a full-range system. Designed to sit perfectly beneath the N1-9, it integrates seamlessly via an active crossover, relieving the main speakers of bass duties for improved clarity.',
-    price: '$999',
-    image: '/images/products/n1-9b.jpg',
-    category: 'Bass Module',
-    features: ['Active Crossover Integration', 'Seamless Design Match', 'Deep Lows to 28Hz'],
-    specs: {
-      frequencyResponse: '28 Hz – 100 Hz',
-      impedance: 'Active (Built-in Amplification)',
-      sensitivity: 'N/A',
-      dimensions: '450mm x 250mm x 400mm',
-      weight: '18 kg',
-      cabinetType: 'Sealed',
-      drivers: '10" Long-Throw Paper Cone',
-    },
+    "id": "s1-2",
+    "name": "S1-2",
+    "slug": "s1-2",
+    "tagline": "Vintage Soul",
+    "description": "Punchy, fast, and incredibly fun. A sealed nearfield monitor that prioritizes rhythm and texture.",
+    "longDescription": "Starter Stereo, Vintage Soul\nPunchy, compact, and fun. A sealed bookshelf with surprising bass presence and adjustable high-frequency voicing for small rooms and nearfield listening.",
+    "price": "$2499",
+    "image": "/images/products/s1-2-hero.jpg",
+    "category": "Speakers",
+    "features": ["Sealed nearfield design", "Adjustable HF voicing", "Compact footprint"],
+    "specs": {
+      "frequencyResponse": "55Hz - 20kHz (-3dB)",
+      "sensitivity": "85dB @ 1W/1m",
+      "impedance": "8 Ohms nominal",
+      "cabinetType": "Sealed (Acoustic Suspension)",
+      "drivers": "5.25\" Paper Cone Woofer, 0.75\" Silk Dome Tweeter",
+      "dimensions": "11\" H x 7\" W x 9\" D",
+      "weight": "12 lbs each"
+    }
   },
+  {
+    "id": "cable-riser",
+    "name": "Cable riser",
+    "slug": "cable-riser",
+    "tagline": "1, 2 or 3 cable riser, 2",
+    "description": "1, 2 or 3 cable riser, 2.5 to 6 inches",
+    "longDescription": "1, 2 or 3 cable riser, 2.5 to 6 inches",
+    "price": "$TBD",
+    "image": "/images/placeholder.jpg",
+    "category": "Audio Tools",
+    "features": [],
+    "specs": {}
+  },
+  {
+    "id": "speaker-riser",
+    "name": "Speaker riser",
+    "slug": "speaker-riser",
+    "tagline": "+/- 8 or +/- 13 or 0 degree riser",
+    "description": "+/- 8 or +/- 13 or 0 degree riser",
+    "longDescription": "+/- 8 or +/- 13 or 0 degree riser",
+    "price": "$TBD",
+    "image": "/images/placeholder.jpg",
+    "category": "Audio Tools",
+    "features": [],
+    "specs": {}
+  },
+  {
+    "id": "spiral-stands",
+    "name": "Spiral Stands",
+    "slug": "spiral-stands",
+    "tagline": "Customizable spiral stands (display modular and 2025 model)",
+    "description": "Customizable spiral stands (display modular and 2025 model)",
+    "longDescription": "Customizable spiral stands (display modular and 2025 model)",
+    "price": "$TBD",
+    "image": "/images/placeholder.jpg",
+    "category": "Audio Tools",
+    "features": [],
+    "specs": {}
+  },
+  {
+    "id": "space-saver",
+    "name": "Space Saver",
+    "slug": "space-saver",
+    "tagline": "Showcase 2025 model again for now",
+    "description": "Showcase 2025 model again for now. Space savers that integrate receiver, amplifer, subwoofer on 2 stands that also hold the bookshelf speakers for a space saving design. ",
+    "longDescription": "Showcase 2025 model again for now. Space savers that integrate receiver, amplifer, subwoofer on 2 stands that also hold the bookshelf speakers for a space saving design. ",
+    "price": "$TBD",
+    "image": "/images/products/space-saver.jpg",
+    "category": "Audio Tools",
+    "features": [],
+    "specs": {}
+  },
+  {
+    "id": "n2-5",
+    "name": "N2-5",
+    "slug": "n2-5",
+    "tagline": "WLM La Scala Baffle on the MDF V2",
+    "description": "WLM La Scala Baffle on the MDF V2",
+    "longDescription": "WLM La Scala Baffle on the MDF V2",
+    "price": "$TBD",
+    "image": "/images/placeholder.jpg",
+    "category": "Speakers",
+    "features": [],
+    "specs": {}
+  },
+  {
+    "id": "n5-2",
+    "name": "N5-2",
+    "slug": "n5-2",
+    "tagline": "2-Way Large bookshelf or floor stander for musicality and depth",
+    "description": "2-Way Large bookshelf or floor stander for musicality and depth. Sealed. ",
+    "longDescription": "2-Way Large bookshelf or floor stander for musicality and depth. Sealed. ",
+    "price": "$TBD",
+    "image": "/images/placeholder.jpg",
+    "category": "Speakers",
+    "features": [],
+    "specs": {}
+  },
+  {
+    "id": "s1-7",
+    "name": "S1-7",
+    "slug": "s1-7",
+    "tagline": "Starter/Stereo series for phase alignment and timing",
+    "description": "Starter/Stereo series for phase alignment and timing. Sealed",
+    "longDescription": "Starter/Stereo series for phase alignment and timing. Sealed",
+    "price": "$TBD",
+    "image": "/images/placeholder.jpg",
+    "category": "Speakers",
+    "features": [],
+    "specs": {}
+  }
 ];

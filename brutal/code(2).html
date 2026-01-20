@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nobius Audio - S1-2 Product Detail</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#DFFF00", // Neon Yellow from image
+              "background-light": "#d4d4d4", // Light concrete gray
+              "background-dark": "#1a1a1a", // Dark concrete
+              "surface-dark": "#111111",
+            },
+            fontFamily: {
+              display: ['"Anton"', 'sans-serif'],
+              mono: ['"Space Mono"', 'monospace'],
+            },
+            backgroundImage: {
+              'concrete-light': "url('https://www.transparenttextures.com/patterns/concrete-wall.png')", 
+              'concrete-dark': "url('https://www.transparenttextures.com/patterns/concrete-wall-2.png')", 
+            },
+            screens: {
+                '3xl': '1800px',
+            },
+            animation: {
+                'bounce-visualizer': 'bounce-visualizer 1s infinite ease-in-out',
+                'pulse-fast': 'pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+                'bounce-visualizer': {
+                    '0%, 100%': { transform: 'scaleY(0.4)' },
+                    '50%': { transform: 'scaleY(1)' },
+                }
+            }
+          },
+        },
+      };
+    </script>
+<style>
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        .grid-bg {
+            background-size: 100px 100px;
+            background-image:
+                linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+        }
+        .dark .grid-bg {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        }
+        .distressed-text {
+            mix-blend-mode: overlay;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }.bar {
+            transform-origin: bottom;
+            animation: bounce-visualizer 0.8s infinite ease-in-out alternate;
+        }
+        .bar:nth-child(1) { animation-duration: 0.6s; animation-delay: 0.1s; height: 40%; }
+        .bar:nth-child(2) { animation-duration: 0.8s; animation-delay: 0.2s; height: 70%; }
+        .bar:nth-child(3) { animation-duration: 0.5s; animation-delay: 0.0s; height: 30%; }
+        .bar:nth-child(4) { animation-duration: 0.7s; animation-delay: 0.3s; height: 90%; }
+        .bar:nth-child(5) { animation-duration: 0.9s; animation-delay: 0.1s; height: 50%; }
+        .bar:nth-child(6) { animation-duration: 0.6s; animation-delay: 0.4s; height: 80%; }
+        .bar:nth-child(7) { animation-duration: 0.8s; animation-delay: 0.2s; height: 60%; }
+        .bar:nth-child(8) { animation-duration: 0.5s; animation-delay: 0.0s; height: 45%; }
+        .bar:nth-child(9) { animation-duration: 0.7s; animation-delay: 0.3s; height: 85%; }
+        .bar:nth-child(10) { animation-duration: 0.9s; animation-delay: 0.1s; height: 55%; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-black dark:text-white font-mono antialiased overflow-x-hidden selection:bg-primary selection:text-black">
+<div class="flex flex-col md:flex-row min-h-screen relative">
+<nav class="w-full md:w-20 lg:w-24 bg-black text-primary flex flex-row md:flex-col justify-between items-center py-6 md:py-12 border-r border-white/10 z-50 fixed md:relative h-16 md:h-auto top-0 left-0">
+<div class="hidden md:block vertical-text font-display text-4xl tracking-wider h-full max-h-[40vh] text-center select-none">
+                NOBIUS AUDIO
+            </div>
+<div class="md:hidden font-display text-2xl tracking-wider pl-4">
+                NOBIUS
+            </div>
+<button class="p-2 hover:text-white transition-colors">
+<span class="material-icons text-3xl">menu</span>
+</button>
+<div class="hidden md:flex flex-col gap-8 text-xs font-bold tracking-widest vertical-text items-center opacity-80">
+<a class="hover:text-white transition-colors py-2" href="#">CONTACT</a>
+<a class="hover:text-white transition-colors py-2" href="#">PHILOSOPHY</a>
+<a class="hover:text-white transition-colors py-2" href="#">PRODUCTS</a>
+<a class="hover:text-white transition-colors py-2" href="#">HOME</a>
+</div>
+</nav>
+<main class="flex-1 relative mt-16 md:mt-0">
+<div class="absolute inset-0 z-0 opacity-40 dark:opacity-20 pointer-events-none bg-concrete-light dark:bg-concrete-dark mix-blend-multiply dark:mix-blend-overlay"></div>
+<div class="absolute inset-0 z-0 grid-bg pointer-events-none"></div>
+<div class="absolute top-[10%] left-[20%] w-[1px] h-[80%] bg-black/20 dark:bg-white/10 z-0 hidden lg:block"></div>
+<div class="absolute top-[30%] right-[10%] w-[200px] h-[1px] bg-black/20 dark:bg-white/10 z-0 hidden lg:block"></div>
+<div class="absolute bottom-[20%] left-[10%] w-[150px] h-[1px] bg-black/20 dark:bg-white/10 z-0"></div>
+<div class="absolute top-[10%] left-[21%] text-[10px] text-black/40 dark:text-white/30 font-mono hidden lg:block">
+                01 — REF. LINE
+            </div>
+<div class="absolute bottom-[20%] left-[calc(10%+160px)] text-[10px] text-black/40 dark:text-white/30 font-mono">
+                X: 420mm
+            </div>
+<div class="relative z-10 w-full h-full flex flex-col lg:grid lg:grid-cols-12 p-6 lg:p-0">
+<div class="lg:col-span-4 flex items-center justify-center lg:justify-start lg:pl-12 relative overflow-hidden h-[400px] lg:h-auto">
+<h1 class="font-display text-[12rem] md:text-[18rem] lg:text-[24rem] leading-none tracking-tighter text-black/90 dark:text-white/10 lg:vertical-text lg:rotate-180 select-none absolute lg:static left-1/2 -translate-x-1/2 lg:translate-x-0 top-1/2 -translate-y-1/2 lg:translate-y-0 opacity-80 dark:opacity-100 mix-blend-hard-light dark:mix-blend-normal">
+                        S1-2
+                    </h1>
+</div>
+<div class="lg:col-span-4 relative flex items-center justify-center -mt-20 lg:mt-0 z-20">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[60%] flex items-end justify-center gap-2 md:gap-4 z-10 mix-blend-difference pointer-events-none opacity-60">
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+<div class="bar w-6 md:w-8 bg-primary"></div>
+</div>
+<div class="absolute top-[80%] left-1/2 -translate-x-1/2 w-[120%] flex justify-between text-[10px] font-mono text-primary z-10 pointer-events-none mix-blend-exclusion">
+<span>LOW [20Hz]</span>
+<span>MID [1kHz]</span>
+<span>HIGH [20kHz]</span>
+</div>
+<div class="relative w-full max-w-md lg:max-w-full aspect-[3/4] lg:aspect-auto lg:h-[80vh] group z-20">
+<div class="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-primary z-30 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-primary z-30 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
+<img alt="S1-2 High Fidelity Speaker" class="w-full h-full object-cover shadow-2xl grayscale contrast-125 brightness-90 hover:grayscale-0 transition-all duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjpUFjV6TktYqacuFUwX4jStch68td49VwErOoAz7sQWeGxT7nnJe2ScqxdS8k1ljg6_Ga-25erfaEmOAWLK6RU8GNLHV42KjH_nH9dGFtRaN0-yG-tQTZzv3KwxmAf6-PPN8I6vlrU4igNaqDvpr8f15uWbPqLn04ee7zm1lXWwrjTgVkcdCN1oDAcE8a7l_fIunIo5O82_E2X7kdO6zm_R70FlRNMgSHk2qw6ywNFQhk_THMtbHtHj74G-Rl_gP5jqO8hs-tT9S4"/>
+<div class="absolute top-1/4 right-8 flex items-center gap-2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-12 h-[1px] bg-primary"></div>
+<span class="text-xs bg-black text-primary px-1">TWEETER: 1" SILK</span>
+</div>
+<button class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-primary text-black font-bold font-mono text-[10px] px-4 py-2 uppercase tracking-widest hover:bg-white transition-colors z-40 flex items-center gap-2 shadow-lg">
+<span class="material-icons text-sm animate-pulse-fast">graphic_eq</span>
+                            PLAY TEST FREQUENCY
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-end lg:justify-center p-4 lg:p-12 pb-24 lg:pb-12 gap-12 z-20">
+<div class="block lg:hidden text-center mb-8">
+<h2 class="font-display text-6xl uppercase">Imperfectly<br/>Honest.</h2>
+</div>
+<div class="space-y-6 max-w-lg mx-auto lg:mx-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-6 border border-black/10 dark:border-white/10">
+<h3 class="font-display text-4xl uppercase leading-none hidden lg:block">Imperfectly<br/>Honest.</h3>
+<p class="text-sm md:text-base leading-relaxed text-justify font-mono text-black/80 dark:text-gray-300">
+                            Truth in materials. Truth in engineering. Truth in how our speakers make you feel. 
+                            Meticulously voiced nearfield monitors for listeners who care more about emotion than perfection on a graph.
+                            The S1-2 is not designed to disappear; it is designed to be present.
+                        </p>
+</div>
+<div class="font-mono text-xs md:text-sm space-y-4 border-t border-black dark:border-white pt-6 max-w-lg mx-auto lg:mx-0 w-full">
+<div class="flex justify-between items-end border-b border-black/20 dark:border-white/20 pb-2">
+<span class="opacity-60">MODEL</span>
+<span class="font-bold">S1-2 REFERENCE</span>
+</div>
+<div class="flex justify-between items-end border-b border-black/20 dark:border-white/20 pb-2">
+<span class="opacity-60">FREQ. RESPONSE</span>
+<span>40Hz - 22kHz</span>
+</div>
+<div class="flex justify-between items-end border-b border-black/20 dark:border-white/20 pb-2">
+<span class="opacity-60">SENSITIVITY</span>
+<span>87dB @ 1W/1m</span>
+</div>
+<div class="flex justify-between items-end border-b border-black/20 dark:border-white/20 pb-2">
+<span class="opacity-60">IMPEDANCE</span>
+<span>6 OHMS NOMINAL</span>
+</div>
+<div class="flex justify-between items-end pb-2">
+<span class="opacity-60">DIMENSIONS</span>
+<span>380 x 220 x 280 mm</span>
+</div>
+</div>
+<div class="flex justify-end lg:justify-start pt-4">
+<button class="group relative bg-primary text-black font-bold font-mono uppercase text-sm px-8 py-4 overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+<span class="relative z-10 flex items-center gap-2">
+                                Enquire for Purchase
+                                <span class="material-icons text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+<div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-4 left-6 md:left-12 hidden lg:flex gap-4 text-[10px] font-mono opacity-50 z-20">
+<span>FIG 2.1 — FRONT ELEVATION</span>
+<span>//</span>
+<span>SERIAL: NOBIUS-S12-001</span>
+</div>
+</main>
+</div>
+</body></html>

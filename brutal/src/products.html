@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Nobius Audio</title>
+    <meta name="description" content="Hand-tuned nearfield monitors and speakers. Browse the Nobius Audio collection.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Products page specific styles */
+        .products-header {
+            margin-bottom: 4rem;
+        }
+
+        .products-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        .products-meta-accent {
+            color: var(--color-primary);
+        }
+
+        .products-meta-line {
+            width: 2rem;
+            height: 1px;
+            background: currentColor;
+        }
+
+        .products-title {
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.9;
+            opacity: 0.9;
+        }
+
+        /* Product Grid */
+        .product-section {
+            position: relative;
+            margin-bottom: 5rem;
+        }
+
+        .product-bg-text {
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+            font-family: var(--font-display);
+            font-size: clamp(6rem, 18vw, 18rem);
+            font-weight: 700;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.04);
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+            transition: transform 0.7s ease;
+        }
+
+        body.dark-mode .product-bg-text {
+            color: rgba(255, 255, 255, 0.04);
+        }
+
+        .product-section:hover .product-bg-text {
+            transform: translateX(1rem);
+        }
+
+        .product-section--reverse .product-bg-text {
+            left: auto;
+            right: -1rem;
+            text-align: right;
+        }
+
+        .product-section--reverse:hover .product-bg-text {
+            transform: translateX(-1rem);
+        }
+
+        .product-grid {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: 7fr 5fr;
+            }
+
+            .product-section--reverse .product-grid {
+                grid-template-columns: 5fr 7fr;
+            }
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            background: rgba(200, 200, 200, 0.3);
+            padding: 2rem;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        body.dark-mode .product-image-wrapper {
+            background: rgba(40, 40, 40, 0.5);
+        }
+
+        .product-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: -1rem;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--color-primary);
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .product-image-guides {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.2;
+        }
+
+        .product-image-guides::before,
+        .product-image-guides::after {
+            content: '';
+            position: absolute;
+            background: currentColor;
+        }
+
+        .product-image-guides::before {
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+        }
+
+        .product-image-guides::after {
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+        }
+
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: contrast(1.15) saturate(0.6);
+            transition: all 0.5s ease;
+            /* Instax/Polaroid style white border */
+            background: #fff;
+            padding: 13px;
+            padding-bottom: 32px;
+            box-shadow:
+                0 4px 6px rgba(0, 0, 0, 0.1),
+                0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image-wrapper:hover .product-image {
+            filter: contrast(1) saturate(1);
+            transform: scale(1.02);
+        }
+
+        .product-stock-badge {
+            position: absolute;
+            bottom: -0.75rem;
+            left: -0.75rem;
+            background: var(--color-primary);
+            color: #000;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 0.25rem 1rem;
+        }
+
+        .product-info {
+            padding: 1rem 0;
+        }
+
+        @media (min-width: 1024px) {
+            .product-info {
+                padding: 0 2rem;
+            }
+
+            .product-section--reverse .product-info {
+                order: -1;
+                text-align: right;
+            }
+        }
+
+        .product-type {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            opacity: 0.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-type .material-symbols-outlined {
+            font-size: 1rem;
+            color: var(--color-primary);
+        }
+
+        .product-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            opacity: 0.8;
+            max-width: 400px;
+            border-left: 2px solid rgba(223, 255, 0, 0.5);
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-section--reverse .product-description {
+            border-left: none;
+            border-right: 2px solid rgba(223, 255, 0, 0.5);
+            padding-left: 0;
+            padding-right: 1.5rem;
+            margin-left: auto;
+        }
+
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            font-size: 0.75rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 0;
+            margin-bottom: 1.5rem;
+        }
+
+        body.dark-mode .product-specs {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .product-spec-label {
+            display: block;
+            opacity: 0.5;
+            text-transform: uppercase;
+            font-size: 0.625rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-spec-value {
+            font-weight: 700;
+        }
+
+        /* Divider */
+        .products-divider {
+            position: relative;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.3;
+            margin: 3rem 0;
+        }
+
+        .products-divider-line {
+            flex: 1;
+            height: 1px;
+            background: currentColor;
+        }
+
+        .products-divider-text {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            padding: 0 1rem;
+            background: var(--color-bg-light);
+        }
+
+        body.dark-mode .products-divider-text {
+            background: var(--color-bg-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-markers">
+                <div class="sidebar-marker" style="width: 8px; height: 24px;"></div>
+                <div class="sidebar-marker" style="width: 16px; height: 8px;"></div>
+            </div>
+
+            <a href="index.html" class="sidebar-brand">Nobius Audio</a>
+
+            <div class="sidebar-nav">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="philosophy.html">Our Philosophy</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="sidebar-markers">
+                <div class="sidebar-marker" style="width: 16px; height: 8px;"></div>
+                <div class="sidebar-marker--primary" style="width: 8px; height: 24px;"></div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Background -->
+            <div class="bg-overlay bg-concrete" style="opacity: 0.6;"></div>
+            <div class="bg-overlay bg-grid" style="opacity: 0.2;"></div>
+
+            <div class="container">
+                <!-- Header -->
+                <header class="products-header">
+                    <div class="products-meta">
+                        <span class="products-meta-accent">///</span>
+                        <span>Catalog 2024</span>
+                        <span class="products-meta-line"></span>
+                        <span>Series: Reference</span>
+                    </div>
+                    <h1 class="products-title">Audio<br>Collection</h1>
+                </header>
+
+                <!-- S1-2 Product -->
+                <section class="product-section">
+                    <div class="product-bg-text">S1-2</div>
+                    <div class="product-grid">
+                        <div class="product-image-wrapper">
+                            <div class="product-image-guides"></div>
+                            <img src="assets/images/s1-2.jpg" alt="S1-2 Reference Speaker" class="product-image">
+                            <div class="product-stock-badge">Stock: Available</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-type">
+                                <span class="material-symbols-outlined">emergency</span>
+                                <span>Nearfield Monitor</span>
+                            </div>
+                            <h2 class="product-title">The S1-2<br>Reference</h2>
+                            <p class="product-description">
+                                Meticulously voiced for those who prioritize emotion over graphs.
+                                The S1-2 delivers uncompromised clarity in a raw, industrial chassis.
+                                Starter Stereo, Vintage Soul.
+                            </p>
+                            <div class="product-specs">
+                                <div>
+                                    <span class="product-spec-label">Driver</span>
+                                    <span class="product-spec-value">6.5" Paper Cone</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Response</span>
+                                    <span class="product-spec-value">55Hz - 17kHz</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Impedance</span>
+                                    <span class="product-spec-value">8 Ohms</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Sensitivity</span>
+                                    <span class="product-spec-value">84-86dB</span>
+                                </div>
+                            </div>
+                            <a href="products/s1-2.html" class="btn btn-primary">
+                                View Details
+                                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Divider -->
+                <div class="products-divider">
+                    <div class="products-divider-line"></div>
+                    <span class="products-divider-text">Engineering Truth</span>
+                    <div class="products-divider-line"></div>
+                </div>
+
+                <!-- N1-9 Product -->
+                <section class="product-section product-section--reverse">
+                    <div class="product-bg-text">N1-9</div>
+                    <div class="product-grid">
+                        <div class="product-image-wrapper">
+                            <div class="product-image-guides"></div>
+                            <img src="assets/images/n1-9.jpg" alt="N1-9 Tower Speaker" class="product-image">
+                            <div class="product-stock-badge">Stock: Limited</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-type">
+                                <span class="material-symbols-outlined">graphic_eq</span>
+                                <span>Compact Bookshelf</span>
+                            </div>
+                            <h2 class="product-title">The N1-9<br>Natural</h2>
+                            <p class="product-description">
+                                Our premium compact bookshelf, designed for purity and poise.
+                                The N1-9 brings natural voicing, lifelike mids, and a spacious stage
+                                that feels effortlessly immersive. Natural. Refined. Intimate.
+                            </p>
+                            <div class="product-specs">
+                                <div>
+                                    <span class="product-spec-label">Config</span>
+                                    <span class="product-spec-value">2-Way Passive</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Response</span>
+                                    <span class="product-spec-value">45Hz - 22kHz</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Sensitivity</span>
+                                    <span class="product-spec-value">88dB</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Power</span>
+                                    <span class="product-spec-value">Up to 100W</span>
+                                </div>
+                            </div>
+                            <a href="products/n1-9.html" class="btn btn-primary">
+                                View Details
+                                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Divider -->
+                <div class="products-divider">
+                    <div class="products-divider-line"></div>
+                    <span class="products-divider-text">Contemporary Power</span>
+                    <div class="products-divider-line"></div>
+                </div>
+
+                <!-- N2-5 Product -->
+                <section class="product-section">
+                    <div class="product-bg-text">N2-5</div>
+                    <div class="product-grid">
+                        <div class="product-image-wrapper">
+                            <div class="product-image-guides"></div>
+                            <img src="assets/images/n2-5.jpg" alt="N2-5 Contemporary Speaker" class="product-image">
+                            <div class="product-stock-badge">Stock: Available</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-type">
+                                <span class="material-symbols-outlined">speaker</span>
+                                <span>Extended Bass</span>
+                            </div>
+                            <h2 class="product-title">The N2-5<br>Contemporary</h2>
+                            <p class="product-description">
+                                For those who crave depth with modern balance, the N2-5 adds bass authority
+                                while maintaining a composed, contemporary voicing. Clean low-end reach,
+                                articulate presence — a confident, room-filling performer.
+                            </p>
+                            <div class="product-specs">
+                                <div>
+                                    <span class="product-spec-label">Config</span>
+                                    <span class="product-spec-value">2-Way Passive</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Response</span>
+                                    <span class="product-spec-value">38Hz - 24kHz</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Sensitivity</span>
+                                    <span class="product-spec-value">89dB</span>
+                                </div>
+                                <div>
+                                    <span class="product-spec-label">Power</span>
+                                    <span class="product-spec-value">Up to 120W</span>
+                                </div>
+                            </div>
+                            <a href="products/n2-5.html" class="btn btn-primary">
+                                View Details
+                                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div>
+                            Nobius Audio<br>
+                            Est. 2024
+                        </div>
+                        <div class="footer-links">
+                            <a href="#">Legal</a>
+                            <a href="#">Privacy</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/central-analytics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

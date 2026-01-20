@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nobius Audio - Contact</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#DFFF00", // Neon Yellow from screenshot
+                        "background-light": "#E0E0E0", // Concrete grey light
+                        "background-dark": "#1A1A1A", // Dark concrete grey
+                        "concrete-dark": "#2d2d2d",
+                        "text-dark": "#111111",
+                        "text-light": "#EEEEEE",
+                    },
+                    fontFamily: {
+                        display: ["Anton", "sans-serif"],
+                        mono: ["Space Mono", "monospace"],
+                    },
+                    backgroundImage: {
+                        'concrete-texture': "url('https://images.unsplash.com/photo-1517146783983-418c681b56c5?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    }
+                },
+            },
+        };
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #DFFF00; 
+        }
+        .writing-mode-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        .grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+            background-size: 100px 100px;
+        }
+        .dark .grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+        }.glitch-hover:hover {
+            animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            color: #DFFF00;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-mono overflow-x-hidden selection:bg-primary selection:text-black">
+<div class="fixed inset-0 pointer-events-none grid-bg z-0 opacity-40"></div>
+<div class="fixed top-10 left-10 w-4 h-4 border-l border-t border-black dark:border-white z-50 opacity-50"></div>
+<div class="fixed top-10 right-10 w-4 h-4 border-r border-t border-black dark:border-white z-50 opacity-50"></div>
+<div class="fixed bottom-10 left-10 w-4 h-4 border-l border-b border-black dark:border-white z-50 opacity-50"></div>
+<div class="fixed bottom-10 right-10 w-4 h-4 border-r border-b border-black dark:border-white z-50 opacity-50"></div>
+<div class="flex min-h-screen relative z-10">
+<aside class="w-20 md:w-24 fixed h-full left-0 top-0 bg-black text-primary border-r border-zinc-800 z-50 flex flex-col justify-between items-center py-8">
+<div class="writing-mode-vertical font-display text-4xl tracking-widest uppercase mb-12 select-none cursor-pointer hover:text-white transition-colors">
+                NOBIUS AUDIO
+            </div>
+<nav class="flex flex-col gap-8 flex-grow justify-center">
+<a class="writing-mode-vertical text-xs tracking-[0.2em] uppercase text-zinc-400 hover:text-primary transition-colors glitch-hover" href="#">Home</a>
+<a class="writing-mode-vertical text-xs tracking-[0.2em] uppercase text-zinc-400 hover:text-primary transition-colors glitch-hover" href="#">Products</a>
+<a class="writing-mode-vertical text-xs tracking-[0.2em] uppercase text-zinc-400 hover:text-primary transition-colors glitch-hover" href="#">Philosophy</a>
+<a class="writing-mode-vertical text-xs tracking-[0.2em] uppercase text-primary font-bold" href="#">Contact</a>
+</nav>
+<div class="w-1 h-24 bg-zinc-800 mt-auto relative">
+<div class="absolute bottom-0 left-0 w-full h-8 bg-primary"></div>
+</div>
+</aside>
+<main class="ml-20 md:ml-24 flex-grow relative bg-concrete-texture bg-cover bg-center bg-fixed bg-no-repeat min-h-screen">
+<div class="absolute inset-0 bg-white/10 dark:bg-black/80 backdrop-grayscale pointer-events-none z-0"></div>
+<div class="relative z-10 w-full min-h-screen flex flex-col lg:flex-row">
+<h1 class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] leading-none font-display uppercase text-black/10 dark:text-white/5 pointer-events-none whitespace-nowrap z-0 blur-[2px]">
+                    CONTACT
+                </h1>
+<div class="w-full lg:w-5/12 p-8 md:p-16 lg:pt-32 flex flex-col justify-center relative">
+<div class="bg-white/80 dark:bg-black/60 backdrop-blur-sm p-8 border border-black/10 dark:border-white/10 shadow-xl">
+<div class="w-8 h-1 bg-primary mb-6"></div>
+<h2 class="font-display text-5xl md:text-6xl text-black dark:text-white uppercase mb-6 leading-[0.9]">
+                            Let's Make<br/>Noise.
+                        </h2>
+<p class="font-mono text-sm md:text-base text-zinc-800 dark:text-zinc-300 leading-relaxed mb-8 max-w-md">
+                            Questions about our engineering? Custom nearfield configurations? Or just want to talk about frequency response curves? We're listening.
+                        </p>
+<div class="space-y-6 font-mono text-xs md:text-sm">
+<div>
+<span class="block text-zinc-500 uppercase tracking-widest mb-1">HQ Location</span>
+<span class="block text-black dark:text-white">742 Industrial Ave, Sector 4<br/>Berlin, Germany</span>
+</div>
+<div>
+<span class="block text-zinc-500 uppercase tracking-widest mb-1">Direct Line</span>
+<span class="block text-black dark:text-white decoration-primary underline underline-offset-4 cursor-pointer hover:bg-primary hover:text-black transition-colors inline-block">+49 30 555 0199</span>
+</div>
+<div>
+<span class="block text-zinc-500 uppercase tracking-widest mb-1">Email</span>
+<span class="block text-black dark:text-white decoration-primary underline underline-offset-4 cursor-pointer hover:bg-primary hover:text-black transition-colors inline-block">hello@nobiusaudio.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-7/12 p-8 md:p-16 flex items-center justify-center lg:justify-start">
+<form class="w-full max-w-lg bg-zinc-100/90 dark:bg-zinc-900/90 backdrop-blur-md p-10 border-l-4 border-primary shadow-2xl relative">
+<div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-black dark:border-white"></div>
+<div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-black dark:border-white"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<div class="group">
+<label class="block font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-2 group-focus-within:text-primary transition-colors" for="name">Identification</label>
+<input class="w-full bg-transparent border-0 border-b border-zinc-400 dark:border-zinc-600 focus:border-primary focus:ring-0 px-0 py-2 text-black dark:text-white font-mono placeholder-zinc-400/50 dark:placeholder-zinc-600 transition-colors rounded-none" id="name" name="name" placeholder="YOUR NAME" type="text"/>
+</div>
+<div class="group">
+<label class="block font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-2 group-focus-within:text-primary transition-colors" for="email">Signal Source</label>
+<input class="w-full bg-transparent border-0 border-b border-zinc-400 dark:border-zinc-600 focus:border-primary focus:ring-0 px-0 py-2 text-black dark:text-white font-mono placeholder-zinc-400/50 dark:placeholder-zinc-600 transition-colors rounded-none" id="email" name="email" placeholder="EMAIL ADDRESS" type="email"/>
+</div>
+</div>
+<div class="mb-8 group">
+<label class="block font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-2 group-focus-within:text-primary transition-colors" for="subject">Subject Vector</label>
+<select class="w-full bg-transparent border-0 border-b border-zinc-400 dark:border-zinc-600 focus:border-primary focus:ring-0 px-0 py-2 text-black dark:text-white font-mono transition-colors rounded-none appearance-none cursor-pointer" id="subject" name="subject">
+<option class="bg-zinc-100 dark:bg-zinc-900">General Inquiry</option>
+<option class="bg-zinc-100 dark:bg-zinc-900">Product Support</option>
+<option class="bg-zinc-100 dark:bg-zinc-900">Distribution Partnership</option>
+<option class="bg-zinc-100 dark:bg-zinc-900">Press / Media</option>
+</select>
+</div>
+<div class="mb-12 group">
+<label class="block font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-2 group-focus-within:text-primary transition-colors" for="message">Transmission Data</label>
+<textarea class="w-full bg-transparent border-0 border-b border-zinc-400 dark:border-zinc-600 focus:border-primary focus:ring-0 px-0 py-2 text-black dark:text-white font-mono placeholder-zinc-400/50 dark:placeholder-zinc-600 transition-colors resize-none rounded-none" id="message" name="message" placeholder="TYPE YOUR MESSAGE HERE..." rows="4"></textarea>
+</div>
+<div class="flex justify-end items-center gap-6">
+<span class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest hidden sm:block">Awaiting input...</span>
+<button class="bg-primary hover:bg-white hover:text-black text-black font-mono font-bold uppercase text-sm tracking-widest px-8 py-4 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1" type="submit">
+                                Transmit
+                            </button>
+</div>
+</form>
+</div>
+</div>
+<div class="absolute bottom-8 right-8 font-mono text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase z-20 hidden md:block">
+                Coordinates: 52.5200° N, 13.4050° E
+            </div>
+</main>
+</div>
+
+</body></html>
