@@ -25,7 +25,7 @@ const Header = () => {
         }`}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="relative h-12 w-48 transition-opacity hover:opacity-80">
+        <Link href="/" className="relative h-16 w-56 transition-opacity hover:opacity-80">
           <Image
             src="/images/logo-dark.png"
             alt="Nobius Audio"

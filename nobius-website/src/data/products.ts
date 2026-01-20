@@ -135,8 +135,8 @@ export const products: Product[] = [
     "description": "Customizable spiral stands (display modular and 2025 model)",
     "longDescription": "Customizable spiral stands (display modular and 2025 model)",
     "price": "$TBD",
-    "image": "/images/placeholder.jpg",
-    "category": "Audio Tools",
+    "image": "/images/products/spiral-stands.jpg",
+    "category": "Stands",
     "features": [],
     "specs": {}
   },
@@ -149,7 +149,7 @@ export const products: Product[] = [
     "longDescription": "Showcase 2025 model again for now. Space savers that integrate receiver, amplifer, subwoofer on 2 stands that also hold the bookshelf speakers for a space saving design. ",
     "price": "$TBD",
     "image": "/images/products/space-saver.jpg",
-    "category": "Audio Tools",
+    "category": "Stands",
     "features": [],
     "specs": {}
   },
