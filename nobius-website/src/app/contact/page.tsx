@@ -1,14 +1,39 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 interface FormState {
   status: 'idle' | 'submitting' | 'success' | 'error';
   message: string;
 }
 
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
+
 export default function ContactPage() {
   const [formState, setFormState] = useState<FormState>({ status: 'idle', message: '' });
+
+  // Load reCAPTCHA script
+  useEffect(() => {
+    if (!RECAPTCHA_SITE_KEY) return;
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,12 +42,28 @@ export default function ContactPage() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // Get reCAPTCHA token
+    let recaptchaToken = '';
+    if (RECAPTCHA_SITE_KEY && window.grecaptcha) {
+      try {
+        recaptchaToken = await new Promise((resolve) => {
+          window.grecaptcha.ready(async () => {
+            const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
+            resolve(token);
+          });
+        });
+      } catch {
+        console.warn('reCAPTCHA failed, proceeding without token');
+      }
+    }
+
     const data = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
       message: `[${formData.get('subject')}] ${formData.get('message')}`,
-      privacyConsent: true, // Implicit consent by submitting
+      recaptchaToken,
+      privacyConsent: true,
     };
 
     try {

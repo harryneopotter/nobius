@@ -31,8 +31,8 @@ export default function StandsPage() {
                 </div>
             </section>
 
-            <section className="container mx-auto px-4 py-24">
-                <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+            <section className="container mx-auto max-w-5xl px-4 py-16 md:py-24">
+                <div className="grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 md:gap-x-10 lg:gap-x-16">
                     {stands.map((product, idx) => (
                         <motion.div
                             key={product.id}
@@ -40,13 +40,10 @@ export default function StandsPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
+                            className="max-w-xs mx-auto"
                         >
                             <Link href={`/products/${product.slug}`} className="group block h-full">
-                                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-stone-900 mb-6">
-                                    <div className="absolute inset-0 flex items-center justify-center text-stone-700">
-                                        {/* Placeholder logic until real images for stands are set */}
-                                        <span className="text-lg">Image: {product.name}</span>
-                                    </div>
+                                <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-stone-900 mb-4">
                                     <Image
                                         src={product.image}
                                         alt={product.name}
@@ -54,11 +51,11 @@ export default function StandsPage() {
                                         className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                                     />
                                 </div>
-                                <div>
-                                    <h3 className="text-2xl font-serif font-medium text-white mb-2 group-hover:text-stone-300">
+                                <div className="text-center">
+                                    <h3 className="text-xl font-serif font-medium text-white mb-1 group-hover:text-stone-300">
                                         {product.name}
                                     </h3>
-                                    <p className="text-stone-400">
+                                    <p className="text-sm text-stone-400">
                                         {product.description}
                                     </p>
                                 </div>

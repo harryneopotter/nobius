@@ -41,8 +41,8 @@ export default function SpeakersPage() {
             </section>
 
             {/* Product List */}
-            <section className="container mx-auto px-4 py-24 md:py-32">
-                <div className="grid grid-cols-1 gap-x-8 gap-y-24 md:grid-cols-2 md:gap-x-16 lg:gap-x-24">
+            <section className="container mx-auto max-w-5xl px-4 py-16 md:py-24">
+                <div className="grid grid-cols-1 gap-x-6 gap-y-16 md:grid-cols-2 md:gap-x-10 lg:gap-x-16">
                     {speakers.map((product, idx) => (
                         <motion.div
                             key={product.id}
@@ -50,10 +50,10 @@ export default function SpeakersPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-10%" }}
                             transition={{ duration: 0.8, delay: idx * 0.1 }}
-                            className="group flex flex-col items-center text-center"
+                            className="group flex flex-col items-center text-center max-w-xs mx-auto"
                         >
                             <Link href={`/products/${product.slug}`} className="w-full">
-                                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-stone-900 mb-8">
+                                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-stone-900 mb-5">
                                     <Image
                                         src={product.image}
                                         alt={product.name}
@@ -62,17 +62,17 @@ export default function SpeakersPage() {
                                     />
                                     <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
                                 </div>
-                                <div className="space-y-4">
-                                    <h3 className="font-serif text-4xl text-white transition-colors group-hover:text-stone-300">
+                                <div className="space-y-2">
+                                    <h3 className="font-serif text-2xl text-white transition-colors group-hover:text-stone-300">
                                         {product.name}
                                     </h3>
-                                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-stone-500">
+                                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-stone-500">
                                         {product.tagline}
                                     </p>
-                                    <p className="mx-auto max-w-md text-lg leading-relaxed text-stone-400">
+                                    <p className="mx-auto max-w-sm text-sm leading-relaxed text-stone-400">
                                         {product.description}
                                     </p>
-                                    <span className="inline-block pt-4 text-sm font-medium text-stone-300 border-b border-transparent transition-all group-hover:border-stone-300">
+                                    <span className="inline-block pt-2 text-xs font-medium text-stone-300 border-b border-transparent transition-all group-hover:border-stone-300">
                                         Explore {product.name}
                                     </span>
                                 </div>
