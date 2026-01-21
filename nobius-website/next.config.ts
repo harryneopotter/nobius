@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // Remove 'output: export' to enable server-side features (API routes)
+  // Deploy to Netlify/Render as Next.js app (not static site)
   images: {
     unoptimized: true,
   },

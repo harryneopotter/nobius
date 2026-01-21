@@ -27,6 +27,7 @@
 .eslintcache
 .idea/
 .vscode/
+extract_to_ts.js
 
 # debug
 npm-debug.log*
@@ -40,6 +41,14 @@ update/
 issues/
 # vercel
 .vercel
+temp_products.txt
+review.jpg
+critical-issues.md
+client-site-implementation.md
+build_error.txt
+.not-needed/
+docs/
+tracked_files.txt
 
 # typescript
 *.tsbuildinfo

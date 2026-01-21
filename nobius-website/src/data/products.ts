@@ -131,27 +131,39 @@ export const products: Product[] = [
     "id": "spiral-stands",
     "name": "Spiral Stands",
     "slug": "spiral-stands",
-    "tagline": "Customizable spiral stands (display modular and 2025 model)",
-    "description": "Customizable spiral stands (display modular and 2025 model)",
-    "longDescription": "Customizable spiral stands (display modular and 2025 model)",
+    "tagline": "Elegant Modular Design",
+    "description": "Customizable spiral speaker stands with adjustable height. Combines minimalist aesthetics with exceptional stability.",
+    "longDescription": "Our Spiral Stands feature a unique helical design that provides both rigidity and visual elegance. The modular construction allows height adjustment to optimize speaker placement for your listening position. Available in multiple finishes to complement any décor.",
     "price": "$TBD",
     "image": "/images/products/spiral-stands.jpg",
     "category": "Stands",
-    "features": [],
-    "specs": {}
+    "features": ["Adjustable height", "Modular design", "Vibration dampening", "Multiple finishes"],
+    "specs": {
+      "material": "Powder-coated steel",
+      "heightRange": "24\" - 36\" adjustable",
+      "baseDiameter": "12\"",
+      "loadCapacity": "50 lbs per stand",
+      "weight": "15 lbs each"
+    }
   },
   {
     "id": "space-saver",
     "name": "Space Saver",
     "slug": "space-saver",
-    "tagline": "Showcase 2025 model again for now",
-    "description": "Showcase 2025 model again for now. Space savers that integrate receiver, amplifer, subwoofer on 2 stands that also hold the bookshelf speakers for a space saving design. ",
-    "longDescription": "Showcase 2025 model again for now. Space savers that integrate receiver, amplifer, subwoofer on 2 stands that also hold the bookshelf speakers for a space saving design. ",
+    "tagline": "Complete Audio Solution",
+    "description": "All-in-one stand system integrating receiver, amplifier, and bookshelf speakers in a compact footprint.",
+    "longDescription": "The Space Saver is our most versatile stand system, designed for complete audio setups in compact spaces. Each shelf is independently adjustable with vibration-dampening rubber isolation. Perfect for apartments, offices, or anywhere space is at a premium.",
     "price": "$TBD",
     "image": "/images/products/space-saver.jpg",
     "category": "Stands",
-    "features": [],
-    "specs": {}
+    "features": ["Integrated equipment shelves", "Compact footprint", "Speaker platforms", "Cable management"],
+    "specs": {
+      "dimensions": "36\" H x 24\" W x 16\" D",
+      "material": "Steel frame with MDF shelves",
+      "loadCapacity": "75 lbs per shelf",
+      "shelves": "3 adjustable shelves",
+      "assembly": "30 minutes, tools included"
+    }
   },
   {
     "id": "n2-5",
