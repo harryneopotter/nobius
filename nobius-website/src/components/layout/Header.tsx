@@ -50,8 +50,8 @@ const Header = () => {
           : 'bg-transparent'
           }`}
       >
-        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="relative h-16 w-56 transition-opacity hover:opacity-80">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+          <Link href="/" className="relative h-20 w-72 transition-opacity hover:opacity-80">
             <Image
               src="/images/logo-dark.png"
               alt="Nobius Audio"
@@ -92,8 +92,8 @@ const Header = () => {
               </button>
               <div
                 className={`absolute left-1/2 top-full w-48 -translate-x-1/2 pt-2 transition-all duration-200 ${isProductsOpen
-                    ? 'opacity-100 visible translate-y-0'
-                    : 'opacity-0 invisible translate-y-2'
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible translate-y-2'
                   }`}
                 onMouseLeave={() => setIsProductsOpen(false)}
               >

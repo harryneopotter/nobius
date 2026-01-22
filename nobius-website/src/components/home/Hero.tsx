@@ -45,9 +45,9 @@ const Hero = () => {
             >
                 <motion.p
                     variants={itemVariants}
-                    className="mb-4 text-xs font-black uppercase tracking-[0.4em] text-stone-300"
+                    className="mb-4 text-sm font-black uppercase tracking-[0.4em] text-stone-300"
                     style={{
-                        WebkitTextStroke: '1px rgba(0,0,0,0.8)',
+                        WebkitTextStroke: '0px rgba(0,0,0,0.8)',
                         textShadow: '0 2px 8px rgba(0,0,0,0.9)'
                     }}
                 >
@@ -56,16 +56,16 @@ const Hero = () => {
 
                 <motion.h1
                     variants={itemVariants}
-                    className="mb-8 font-serif text-5xl font-medium leading-[1.1] tracking-tight text-white md:text-7xl lg:text-8xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]"
+                    className="mb-8 font-serif text-4xl font-medium leading-[1.1] tracking-tight text-white md:text-6xl lg:text-7xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]"
                 >
-                    Handcrafted in Illinois, with care.
+                    Handcrafted in Illinois.
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
-                    className="mb-10 max-w-2xl text-base leading-relaxed text-stone-200 md:text-lg drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
+                    className="mb-10 max-w-2xl text-lg leading-relaxed text-stone-200 md:text-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
                 >
-                    High-performance speakers designed for the love of music,
+                    Audio Equipment designed for the love of music,
                     built with disciplined engineering and artisanal care.
                 </motion.p>
 
