@@ -196,13 +196,13 @@ export default function WhyNobiusPage() {
                             className="space-y-6"
                         >
                             <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Craft & Design</span>
-                            <h2 className="font-serif text-4xl md:text-5xl text-white">Built Hard by Hand in Illinois</h2>
+                            <h2 className="font-serif text-4xl md:text-5xl text-white">Built by Hand in Illinois</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
                                     Every Nobius speaker is assembled in our Lake in the Hills, IL workshop. One person, start to finish. From selecting the wood and running the CNC to cutting damping material and applying finish, nothing gets outsourced.
                                 </p>
                                 <p>
-                                    The cabinets use a mix of old and new techniques: mitered plywood with rounded edges, dado-cut joint panels, front and rear rebates. All CNC cut on hardwood Baltic Birch—right is real oak. Damping is hand-cut and fitted to each panel. The crossover is point-to-point, in-house, one speaker at a time.
+                                    The cabinets use a mix of old and new techniques: mitered plywood with rounded edges, dado-cut MDF panels, front and rear baffles mounted on hardwood battens for a tight seal. Damping is hand-cut and placed where it needs to be. Finishes are done in-house, one speaker at a time.
                                 </p>
                             </div>
                         </motion.div>
@@ -232,10 +232,10 @@ export default function WhyNobiusPage() {
                             <h2 className="font-serif text-4xl md:text-5xl text-white">Finding the Right Sound</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
-                                    We tested over 20 woofer and tweeter combinations to find modern drivers that capture the character of vintage speakers.
+                                    We tested over 20 woofer and tweeter combinations to find modern drivers that capture the character of vintage legends like the KEF B200 and Audax HD20.
                                 </p>
                                 <p>
-                                    Drivers are designed to match the model. Every N1-9 sounds like the N1-9. Each speaker is tuned in a real room, not a sterile chamber. We verify voicing through listening tests, room ports, and feedback from the community.
+                                    Voicing is designed to suit the model. Every N1-9 sounds like an N1-9. Each speaker is broken in and re-measured after assembly. If a driver falls outside spec, it gets replaced. We verify voicing through listening panels, room tests, and feedback from the community.
                                 </p>
                             </div>
                         </motion.div>
@@ -266,13 +266,13 @@ export default function WhyNobiusPage() {
                             <h2 className="font-serif text-4xl md:text-5xl text-white">The Art of the Crossover</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
-                                    Every crossover runs through the same process: simulate, measure, listen, refine. Repeat until it sounds right. Not just on paper, but in your living room.
+                                    Every crossover goes through the same process: simulate, measure, listen, refine. Repeat until it sounds right. Not just on paper but in the room, with real music.
                                 </p>
                                 <p>
-                                    The S1-2 is a good example. We genetically bred "vintage" sound using modern drivers and crossover topology. Resistors are 1% tolerance steel crossover inductors. It wasn't tuned to be better. It was tuned to be true.
+                                    The S1-2 is a good example. We generally prefer simple signal paths, but extensive testing and listener feedback pushed us toward an asymmetric crossover topology. It wasn't the easiest choice, but it consistently sounded better in blind tests. So we went with what worked.
                                 </p>
                                 <p>
-                                    All crossovers are built on custom PCBs using high-tolerance components, backed by ClarityCap film capacitors and hand-soldered air-core inductors. No cheap electrolytic caps. This means long-term stability and signal integrity.
+                                    All crossovers are built on custom PCBs using measured components within tight tolerances. Each board is hand-soldered and mechanically isolated to reduce vibration. The goal is long-term stability and signal integrity.
                                 </p>
                             </div>
                         </motion.div>
@@ -336,7 +336,7 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center text-stone-400 mt-12 max-w-2xl mx-auto"
                     >
-                        We're builders, music lovers, and engineers who believe in doing things proper. Good materials. Simple circuits. Pure sound.
+                        We're builders, music lovers, and engineers who believe in doing things proper: Good materials, quality sound, timeless craftsmanship.
                     </motion.p>
                 </div>
             </section>
@@ -358,19 +358,19 @@ export default function WhyNobiusPage() {
                         {[
                             {
                                 title: "We design speakers that make music fun.",
-                                desc: "If it doesn't make you think, \"What track should I play next?\" we haven't done our job."
+                                desc: "If it doesn't make you think, \"What track should I play next?\", it's not done yet."
                             },
                             {
                                 title: "We avoid unnecessary complexity.",
-                                desc: "Can you hear a 0.1dB ripple at 15kHz? Neither can we. We focus on what matters."
+                                desc: "We don't chase numbers no one can hear. If a resonance is inaudible, it's solved."
                             },
                             {
-                                title: "We like the classics.",
-                                desc: "Old mixers, vintage gear, analog warmth. Nobius speakers are designed to suit, not replace, the sounds you love."
+                                title: "We build for the long term.",
+                                desc: "Like the classics we admire, Nobius speakers are designed to last; and be passed down."
                             },
                             {
-                                title: "We respect your listening space.",
-                                desc: "Every Nobius is tuned in a real room—not an anechoic chamber."
+                                title: "We respect your Listening space.",
+                                desc: "It is sacred and full of meaningful things. Every piece matters. We're asking for a spot in your collection, and we don't take that lightly. What we offer is affordable, high-quality sound that earns its place."
                             },
                         ].map((item, i) => (
                             <motion.div
