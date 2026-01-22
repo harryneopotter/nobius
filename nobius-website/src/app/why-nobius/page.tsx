@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Image Gallery Component with Crossfade Transition
 function ImageGallery({ images, title }: { images: string[]; title: string }) {
@@ -17,6 +17,18 @@ function ImageGallery({ images, title }: { images: string[]; title: string }) {
         setDirection(-1);
         setCurrentIndex((i) => (i - 1 + images.length) % images.length);
     };
+
+    // Autoplay with 4-second interval
+    useEffect(() => {
+        if (images.length <= 1) return;
+
+        const timer = setInterval(() => {
+            setDirection(1);
+            setCurrentIndex((i) => (i + 1) % images.length);
+        }, 4000);
+
+        return () => clearInterval(timer);
+    }, [images.length]);
 
     const variants = {
         enter: {
@@ -257,7 +269,7 @@ export default function WhyNobiusPage() {
                                     Every crossover runs through the same process: simulate, measure, listen, refine. Repeat until it sounds right. Not just on paper, but in your living room.
                                 </p>
                                 <p>
-                                    The S1-2 is a good example. We genetically bred "vintage" sound using modern drivers and crossover topology. Resistors are 1% tolerance steel crossover inductors. It wasn't tuned to be better. It was tuned to be honest.
+                                    The S1-2 is a good example. We genetically bred "vintage" sound using modern drivers and crossover topology. Resistors are 1% tolerance steel crossover inductors. It wasn't tuned to be better. It was tuned to be true.
                                 </p>
                                 <p>
                                     All crossovers are built on custom PCBs using high-tolerance components, backed by ClarityCap film capacitors and hand-soldered air-core inductors. No cheap electrolytic caps. This means long-term stability and signal integrity.
@@ -325,7 +337,7 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center text-stone-400 mt-12 max-w-2xl mx-auto"
                     >
-                        We're builders, music lovers, and engineers who believe in doing things proper. Good materials. Simple circuits. Honest sound.
+                        We're builders, music lovers, and engineers who believe in doing things proper. Good materials. Simple circuits. Pure sound.
                     </motion.p>
                 </div>
             </section>
@@ -385,14 +397,6 @@ export default function WhyNobiusPage() {
                         <ImageGallery images={philosophyImages.slice(4)} title="Philosophy" />
                     </motion.div>
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        className="text-center font-serif text-xl italic text-stone-300 mt-16"
-                    >
-                        "We're waiting for a spot in your collection, and we're grateful for your consideration."
-                    </motion.p>
                 </div>
             </section>
 

@@ -11,8 +11,8 @@ export default function ProductsPage() {
             Our Collection
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-stone-600 dark:text-stone-400">
-            Hand-tuned for honesty. Each model is engineered to reveal the truth in your music,
-            from intimate nearfield monitors to full-range systems.
+            Hand-tuned, each model is engineered to reveal the joy in your music,
+            from intimate near-field monitors to full range speakers.
           </p>
         </div>
       </section>

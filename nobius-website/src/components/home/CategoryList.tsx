@@ -9,7 +9,7 @@ const categories = [
         id: 'speakers',
         name: 'Speakers',
         href: '/products/speakers',
-        description: 'Honest, musical sound reproduction that reveals the true essence of your recordings.',
+        description: 'Pure, musical sound reproduction that reveals the true essence of your recordings.',
         image: '/images/products/s1-2-hero.jpg',
         alignment: 'left', // Text Left, Image Right
     },
@@ -26,7 +26,7 @@ const categories = [
         name: 'Audio Tools',
         href: '/products/audio-tools',
         description: 'Precision accessories designed for the critical listener.',
-        image: '/images/products/s1-2-hero.jpg',
+        image: '/images/products/risers/risers4.jpg',
         alignment: 'left', // Text Left, Image Right
     }
 ];

@@ -21,9 +21,9 @@ export const products: Product[] = [
     "id": "n1-9",
     "name": "N1-9",
     "slug": "n1-9",
-    "tagline": "The Reference Monitor",
-    "description": "A BBC-inspired classic designed for absolute tonal honesty. The N1-9 vanishes into the room, leaving only the music.",
-    "longDescription": "Reference Voicing\nClassic, linear, and vocal-forward. A BBC-inspired monitor designed for long sessions, vintage sources, and honest midrange reproduction.",
+    "tagline": "Natural. Refined. Intimate.",
+    "description": "A reference bookshelf inspired by classic BBC voicing. Linear, vocal-focused, and spacious, the N1-9 delivers clarity and imaging with a calm, composed presentation.",
+    "longDescription": "Natural. Refined. Intimate.\nA reference bookshelf inspired by classic BBC voicing. Linear, vocal-focused, and spacious, the N1-9 delivers clarity and imaging with a calm, composed presentation designed for serious listening.",
     "price": "$TBD",
     "image": "/images/products/n1-9.jpg",
     "category": "Speakers",
@@ -84,9 +84,9 @@ export const products: Product[] = [
     "id": "s1-2",
     "name": "S1-2",
     "slug": "s1-2",
-    "tagline": "Vintage Soul",
-    "description": "Punchy, fast, and incredibly fun. A sealed nearfield monitor that prioritizes rhythm and texture.",
-    "longDescription": "Starter Stereo, Vintage Soul\nPunchy, compact, and fun. A sealed bookshelf with surprising bass presence and adjustable high-frequency voicing for small rooms and nearfield listening.",
+    "tagline": "Starter Stereo, Vintage Soul",
+    "description": "An entry-level monitor designed to make music enjoyable first and analytical second. Warm, punchy, and incredibly fun.",
+    "longDescription": "A compact sealed bookshelf that gives the impression of added low-end weight, often enough to skip a subwoofer completely. Features a unique user-settable high-frequency voicing feature that allows subtle tailoring of the top end. Ideal for small rooms, desktops, and nearfield listening.",
     "price": "$2499",
     "image": "/images/products/s1-2-hero.jpg",
     "category": "Speakers",
@@ -103,29 +103,38 @@ export const products: Product[] = [
   },
   {
     "id": "cable-riser",
-    "name": "Cable riser",
+    "name": "Cable Risers",
     "slug": "cable-riser",
-    "tagline": "1, 2 or 3 cable riser, 2",
-    "description": "1, 2 or 3 cable riser, 2.5 to 6 inches",
-    "longDescription": "1, 2 or 3 cable riser, 2.5 to 6 inches",
+    "tagline": "Elevate Your Cables",
+    "description": "Handcrafted wooden cable risers in 1, 2, or 3-cable configurations. Heights from 2.5 to 6 inches.",
+    "longDescription": "Our cable risers are handcrafted from select hardwoods with artisan detailing. Available in single, double, and triple cable configurations with adjustable heights from 2.5 to 6 inches. Keeps your audio cables elevated and organized while adding a touch of craftsmanship to your listening space.",
     "price": "$TBD",
-    "image": "/images/placeholder.jpg",
+    "image": "/images/products/risers/risers1.jpg",
     "category": "Audio Tools",
-    "features": [],
-    "specs": {}
+    "features": ["Handcrafted hardwood", "1, 2, or 3 cable slots", "2.5\" - 6\" height options", "Multiple wood finishes"],
+    "specs": {
+      "material": "Select hardwoods (Walnut, Oak, Maple)",
+      "configurations": "1, 2, or 3 cable slots",
+      "heightRange": "2.5\" - 6\"",
+      "finish": "Hand-rubbed oil finish"
+    }
   },
   {
     "id": "speaker-riser",
-    "name": "Speaker riser",
+    "name": "Speaker Risers",
     "slug": "speaker-riser",
-    "tagline": "+/- 8 or +/- 13 or 0 degree riser",
-    "description": "+/- 8 or +/- 13 or 0 degree riser",
-    "longDescription": "+/- 8 or +/- 13 or 0 degree riser",
+    "tagline": "Precision Angle Adjustment",
+    "description": "Adjustable speaker risers with +/- 8° or +/- 13° angle options. Optimizes speaker positioning for your listening position.",
+    "longDescription": "Fine-tune your speaker angle with our precision-crafted speaker risers. Available in +/- 8°, +/- 13°, or flat (0°) configurations to optimize the soundstage for your specific listening position. Machined for stability and acoustic isolation.",
     "price": "$TBD",
     "image": "/images/placeholder.jpg",
     "category": "Audio Tools",
-    "features": [],
-    "specs": {}
+    "features": ["Adjustable angle options", "Precision machined", "Acoustic isolation", "Universal fit"],
+    "specs": {
+      "angleOptions": "+/- 8°, +/- 13°, or 0° (flat)",
+      "material": "Machined aluminum with isolation pads",
+      "loadCapacity": "Up to 50 lbs per riser"
+    }
   },
   {
     "id": "spiral-stands",
@@ -164,19 +173,6 @@ export const products: Product[] = [
       "shelves": "3 adjustable shelves",
       "assembly": "30 minutes, tools included"
     }
-  },
-  {
-    "id": "n2-5",
-    "name": "N2-5",
-    "slug": "n2-5",
-    "tagline": "WLM La Scala Baffle on the MDF V2",
-    "description": "WLM La Scala Baffle on the MDF V2",
-    "longDescription": "WLM La Scala Baffle on the MDF V2",
-    "price": "$TBD",
-    "image": "/images/placeholder.jpg",
-    "category": "Speakers",
-    "features": [],
-    "specs": {}
   },
   {
     "id": "n5-2",

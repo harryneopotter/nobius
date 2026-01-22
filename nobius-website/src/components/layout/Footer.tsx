@@ -22,7 +22,7 @@ const Footer = () => {
             </Link>
             <p className="text-sm text-stone-400 leading-relaxed">
               Handcrafted audio equipment built with care in Illinois.
-              Honest sound, refined performance.
+              Pure sound, refined performance.
             </p>
           </div>
 

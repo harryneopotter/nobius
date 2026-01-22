@@ -35,7 +35,7 @@ export default function SpeakersPage() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="mt-6 max-w-2xl text-lg text-stone-200 md:text-xl"
                     >
-                        Imperfectly honest sound, crafted for emotional connection.
+                        Imperfectly beautiful sound, crafted for emotional connection.
                     </motion.p>
                 </div>
             </section>

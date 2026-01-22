@@ -23,7 +23,7 @@ const categories = [
         name: 'Audio Tools',
         href: '/products/audio-tools',
         description: 'Precision accessories for critical listening.',
-        image: '/images/products/s1-2-hero.jpg', // Placeholder
+        image: '/images/products/risers/risers4.jpg',
     }
 ];
 
