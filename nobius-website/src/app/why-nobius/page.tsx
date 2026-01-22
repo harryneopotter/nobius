@@ -180,7 +180,7 @@ export default function WhyNobiusPage() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-lg md:text-xl font-light text-stone-300"
                     >
-                        Claude gets me better than my CGPT.
+                        Built by hand. Tuned by ear. Loved by music.
                     </motion.p>
                 </div>
             </section>
@@ -303,10 +303,9 @@ export default function WhyNobiusPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                         {[
-                            { title: "Woodworking", desc: "Decades of custom woodworking experience." },
-                            { title: "Manufacturing & Design", desc: "25+ years in milestone processes, design, and R&D." },
-                            { title: "Aerospace & RF Engineering", desc: "18+ years of military aerospace engineering." },
-                            { title: "Landsat Systems", desc: "Multiple patents in power management, optical science, imaging." },
+                            { title: "Woodworking", desc: "Decades of custom woodworking and audio component builds." },
+                            { title: "Automotive Re-manufacturing & Design", desc: "25+ years in restorative processes, design, and R&D. A lifelong audio enthusiast." },
+                            { title: "Aerospace & RF Engineering", desc: "18+ years of innovation in in-flight entertainment and satellite systems with multiple patents. Technical design rooted in reliability and performance." },
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
