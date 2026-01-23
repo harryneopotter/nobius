@@ -115,39 +115,40 @@ function ImageGallery({ images, title }: { images: string[]; title: string }) {
 
 // Gallery image paths
 const craftDesignImages = [
-    '/images/why-nobius/C and D 01.jpg',
-    '/images/why-nobius/C and D 02.jpg',
-    '/images/why-nobius/C and D 03.jpg',
-    '/images/why-nobius/C and D 04.jpg',
-    '/images/why-nobius/C and D 05.jpg',
-    '/images/why-nobius/C and D 06.jpg',
+    '/images/galleries/craft-design/C and D 01.jpg',
+    '/images/galleries/craft-design/C and D 02.jpg',
+    '/images/galleries/craft-design/C and D 03.jpg',
+    '/images/galleries/craft-design/C and D 04.jpg',
+    '/images/galleries/craft-design/C and D 05.jpg',
+    '/images/galleries/craft-design/C and D 06.jpg',
 ];
 
 const crossoverImages = [
-    '/images/why-nobius/Crossover execution 01.jpg',
-    '/images/why-nobius/Crossover execution 02.jpg',
-    '/images/why-nobius/Crossover execution 03.JPG',
+    '/images/galleries/crossover/Crossover execution 01.jpg',
+    '/images/galleries/crossover/Crossover execution 02.jpg',
+    '/images/galleries/crossover/Crossover execution 03.JPG',
 ];
 
 const philosophyImages = [
-    '/images/why-nobius/Philosophy 01.jpg',
-    '/images/why-nobius/Philosophy 02.jpg',
-    '/images/why-nobius/Philosophy 03.jpg',
-    '/images/why-nobius/Philosophy 04.jpg',
-    '/images/why-nobius/Philosophy 05.jpg',
-    '/images/why-nobius/Philosophy 06.jpg',
-    '/images/why-nobius/Philosophy 07.jpg',
-    '/images/why-nobius/Philosophy 08.jpg',
+    '/images/galleries/philosophy/Philosophy 01.jpg',
+    '/images/galleries/philosophy/Philosophy 02.jpg',
+    '/images/galleries/philosophy/Philosophy 03.jpg',
+    '/images/galleries/philosophy/Philosophy 04.jpg',
+    '/images/galleries/philosophy/Philosophy 05.jpg',
+    '/images/galleries/philosophy/Philosophy 06.jpg',
+    '/images/galleries/philosophy/Philosophy 07.jpg',
+    '/images/galleries/philosophy/Philosophy 08.jpg',
 ];
 
 const whoWeAreImages = [
-    '/images/why-nobius/Who We are 01.JPG',
-    '/images/why-nobius/Who We are 02.JPG',
-    '/images/why-nobius/Who We are 03.JPG',
-    '/images/why-nobius/Who We are 04.JPG',
-    '/images/why-nobius/Who We are 05.JPG',
-    '/images/why-nobius/Who We are 06.JPG',
-    '/images/why-nobius/Who We are 07.JPG',
+    '/images/galleries/who-we-are/Who We are 01.JPG',
+    '/images/galleries/who-we-are/Who We are 02.JPG',
+    '/images/galleries/who-we-are/Who We are 03.JPG',
+    '/images/galleries/who-we-are/Who We are 04.JPG',
+    '/images/galleries/who-we-are/Who We are 05.JPG',
+    '/images/galleries/who-we-are/Who We are 06.JPG',
+    '/images/galleries/who-we-are/Who We are 07.JPG',
+    '/images/galleries/who-we-are/Who We are 08.jpg',
 ];
 
 export default function WhyNobiusPage() {
@@ -229,7 +230,7 @@ export default function WhyNobiusPage() {
                             className="lg:order-2 space-y-6"
                         >
                             <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Driver Selection & Voicing</span>
-                            <h2 className="font-serif text-4xl md:text-5xl text-white">Finding the Right Sound</h2>
+                            <h2 className="font-serif text-4xl md:text-5xl text-white">Driver Selection & Voicing</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
                                     We tested over 20 woofer and tweeter combinations to find modern drivers that capture the character of vintage legends like the KEF B200 and Audax HD20.
@@ -263,7 +264,7 @@ export default function WhyNobiusPage() {
                             className="space-y-6"
                         >
                             <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Crossover Execution</span>
-                            <h2 className="font-serif text-4xl md:text-5xl text-white">The Art of the Crossover</h2>
+                            <h2 className="font-serif text-4xl md:text-5xl text-white">Crossover Execution</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
                                     Every crossover goes through the same process: simulate, measure, listen, refine. Repeat until it sounds right. Not just on paper but in the room, with real music.
@@ -298,7 +299,7 @@ export default function WhyNobiusPage() {
                         className="text-center max-w-3xl mx-auto mb-16"
                     >
                         <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Who We Are</span>
-                        <h2 className="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">The Team Behind Nobius</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">Who We Are</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -351,7 +352,7 @@ export default function WhyNobiusPage() {
                         className="text-center max-w-3xl mx-auto mb-16"
                     >
                         <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Our Philosophy</span>
-                        <h2 className="font-serif text-4xl md:text-5xl text-white mt-4">What We Believe</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl text-white mt-4">Our Philosophy</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
