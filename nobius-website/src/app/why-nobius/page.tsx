@@ -229,7 +229,6 @@ export default function WhyNobiusPage() {
                             viewport={{ once: true }}
                             className="lg:order-2 space-y-6"
                         >
-                            <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Driver Selection & Voicing</span>
                             <h2 className="font-serif text-4xl md:text-5xl text-white">Driver Selection & Voicing</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
@@ -263,7 +262,6 @@ export default function WhyNobiusPage() {
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Crossover Execution</span>
                             <h2 className="font-serif text-4xl md:text-5xl text-white">Crossover Execution</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
@@ -298,7 +296,6 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center max-w-3xl mx-auto mb-16"
                     >
-                        <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Who We Are</span>
                         <h2 className="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">Who We Are</h2>
                     </motion.div>
 
@@ -351,7 +348,6 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center max-w-3xl mx-auto mb-16"
                     >
-                        <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Our Philosophy</span>
                         <h2 className="font-serif text-4xl md:text-5xl text-white mt-4">Our Philosophy</h2>
                     </motion.div>
 
