@@ -31,17 +31,13 @@ const Hero = () => {
         <section className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center overflow-hidden px-4 text-center">
             {/* Background Video */}
             <div className="absolute inset-0 z-0">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-                    style={{ backgroundImage: "url('/images/hero-main.jpg')" }}
-                />
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    poster="/images/hero-main.jpg"
-                    className="absolute inset-0 h-full w-full object-cover opacity-90"
+                    poster="/images/hero-poster.jpg"
+                    className="absolute inset-0 h-full w-full object-cover"
                 >
                     <source src="/videos/hero-optimized.mp4" type="video/mp4" />
                 </video>
