@@ -33,13 +33,16 @@ interface TelegramMessage {
 export async function sendToTelegram(data: TelegramMessage): Promise<boolean> {
     const { BOT_TOKEN, CHAT_ID } = TELEGRAM_CONFIG;
 
+    console.log('[Telegram] Starting send, BOT_TOKEN exists:', !!BOT_TOKEN, 'CHAT_ID exists:', !!CHAT_ID);
+
     if (!BOT_TOKEN || !CHAT_ID) {
-        console.error('Telegram credentials not configured');
+        console.error('[Telegram] Credentials not configured - BOT_TOKEN:', !!BOT_TOKEN, 'CHAT_ID:', !!CHAT_ID);
         return false;
     }
 
     // Support multiple chat IDs (comma-separated)
     const chatIds = CHAT_ID.split(',').map(id => id.trim()).filter(Boolean);
+    console.log('[Telegram] Sending to', chatIds.length, 'chat(s)');
 
     const text = `
 🔔 *New Contact Form Submission*
@@ -75,20 +78,30 @@ ${escapeMarkdown(data.message)}
                 );
 
                 const result = await response.json();
+                console.log('[Telegram] API response for chat', chatId, ':', JSON.stringify(result));
                 return result.ok === true;
             } catch (error) {
-                console.error(`Telegram send failed for chat ${chatId}:`, error);
+                console.error(`[Telegram] Send failed for chat ${chatId}:`, error);
                 return false;
             }
         })
     );
 
     // Return true if at least one message was sent successfully
-    return results.some(r => r === true);
+    const success = results.some(r => r === true);
+    console.log('[Telegram] Final result:', success, 'Individual results:', results);
+    return success;
 }
 
 function escapeMarkdown(text: string): string {
-    return text.replace(/[_*[\]()~`>#+=|{}.!-]/g, '\\$&');
+    // Only escape the most critical markdown characters
+    return text
+        .replace(/\\/g, '\\\\')
+        .replace(/\*/g, '\\*')
+        .replace(/_/g, '\\_')
+        .replace(/\[/g, '\\[')
+        .replace(/\]/g, '\\]')
+        .replace(/`/g, '\\`');
 }
 
 export async function verifyRecaptcha(token: string): Promise<{ success: boolean; score?: number }> {
