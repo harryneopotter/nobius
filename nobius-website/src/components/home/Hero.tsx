@@ -29,11 +29,23 @@ const Hero = () => {
 
     return (
         <section className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center overflow-hidden px-4 text-center">
-            {/* Background Image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: "url('/images/hero-main.jpg')" }}
-            />
+            {/* Background Video */}
+            <div className="absolute inset-0 z-0">
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+                    style={{ backgroundImage: "url('/images/hero-main.jpg')" }}
+                />
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/images/hero-main.jpg"
+                    className="absolute inset-0 h-full w-full object-cover opacity-90"
+                >
+                    <source src="/videos/hero-optimized.mp4" type="video/mp4" />
+                </video>
+            </div>
             {/* Dark Overlay for text readability */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/40" />
 
