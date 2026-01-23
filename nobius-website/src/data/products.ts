@@ -11,9 +11,11 @@ export interface Product {
   longDescription?: string;
   price: string;
   image: string;
+  galleryImages?: string[];
   category: string;
   features: string[];
   specs: ProductSpecs;
+  specsText?: string;
 }
 
 export const products: Product[] = [
@@ -23,20 +25,13 @@ export const products: Product[] = [
     "slug": "n1-9",
     "tagline": "Natural. Refined. Intimate.",
     "description": "A reference bookshelf inspired by classic BBC voicing. Linear, vocal-focused, and spacious, the N1-9 delivers clarity and imaging with a calm, composed presentation.",
-    "longDescription": "Natural. Refined. Intimate.\nA reference bookshelf inspired by classic BBC voicing. Linear, vocal-focused, and spacious, the N1-9 delivers clarity and imaging with a calm, composed presentation designed for serious listening.",
-    "price": "$TBD",
+    "longDescription": "The N1-9 is the tonal reference of the Nobius lineup. Voiced with a classic, BBC-inspired balance, it prioritizes midrange accuracy, vocal presence, and spatial coherence. The presentation is airy and controlled, with a gentle high-frequency roll-off that favors realism and long-term comfort over spectacle.\n\nDesigned for vintage sources, vinyl playback, and classic amplifiers, the N1-9 is equally at home in studio-leaning and audiophile systems. Its linear response and disciplined voicing make it ideal for desktop setups through medium-sized rooms.\n\nThe N1-9 can be expanded with the matching N1-9B bass module, transforming the system into a true three-way design while preserving the speaker's tonal integrity and imaging.\n\nRecommended: speaker risers\nExpandable: with N1-9B bass module",
+    "price": "$1499",
     "image": "/images/products/n1-9.jpg",
     "category": "Speakers",
     "features": ["BBC-inspired voicing", "Paper cone midrange", "Baltic Birch cabinet"],
-    "specs": {
-      "frequencyResponse": "45Hz - 20kHz (-3dB)",
-      "sensitivity": "87dB @ 1W/1m",
-      "impedance": "8 Ohms nominal",
-      "cabinetType": "Sealed (Acoustic Suspension)",
-      "drivers": "6.5\" Paper Cone Woofer, 1\" Silk Dome Tweeter",
-      "dimensions": "14\" H x 8\" W x 10\" D",
-      "weight": "18 lbs each"
-    }
+    "specs": {},
+    "specsText": "19-liter sealed enclosure with Birch ply cabinet and MDF baffles (front and rear).\n8\" Woofer and 1\" silk dome tweeter\nDimensions: 10\" W x 14\" H x 9\" D\nNominal power handling: 5 to 50W\nMax power: Without N1-9B: 75W | With N1-9B: 200W\nResponse: 60Hz - 17Khz (+/- 3dB)\nBass extension: ~ 55Hz (-6dB)"
   },
   {
     "id": "n2-5",
@@ -44,20 +39,13 @@ export const products: Product[] = [
     "slug": "n2-5",
     "tagline": "Contemporary Accuracy, Familiar Soul",
     "description": "A modern evolution with greater scale and control. Clean, composed, and room-filling, the N2-5 blends contemporary accuracy with the musical DNA of the N1-9.",
-    "longDescription": "The N2-5 builds on the foundation of the N1-9 with a more modern, refined presentation. Housed in a larger enclosure, it delivers improved linearity, higher output capability, and a more authoritative sense of space while maintaining a polite, controlled low end.\n\nIts voicing is clean and contemporary, designed for listeners who value accuracy and balance without sacrificing musical engagement. The N2-5 scales well with amplification and is capable of filling small to medium rooms confidently, with or without a subwoofer.\n\nPositioned as a more polished and capable evolution of the S1-2 concept, the N2-5 offers precision without sterility and clarity without fatigue.\n\nRecommended: speaker stands",
-    "price": "$TBD",
+    "longDescription": "Its voicing is clean and contemporary, designed for listeners who value accuracy and balance without sacrificing musical engagement.\n\nThe N2-5 scales well with amplification and is capable of filling small to medium rooms confidently, with or without a subwoofer. Positioned as a more polished and capable evolution of the S1-2 concept, the N2-5 offers precision without sterility and clarity without fatigue.\n\nRecommended: speaker stands",
+    "price": "$1999",
     "image": "/images/products/n2-5.jpg",
     "category": "Speakers",
     "features": ["Modern neutral voicing", "Extended bass response", "High power handling"],
-    "specs": {
-      "frequencyResponse": "38Hz - 22kHz (-3dB)",
-      "sensitivity": "89dB @ 1W/1m",
-      "impedance": "6 Ohms nominal",
-      "cabinetType": "Ported (Bass Reflex)",
-      "drivers": "7\" Treated Paper Woofer, 1\" Beryllium Dome Tweeter",
-      "dimensions": "16\" H x 9\" W x 12\" D",
-      "weight": "24 lbs each"
-    }
+    "specs": {},
+    "specsText": "25-liter sealed MDF enclosure with floating baffle. Internal brace to dampen cabinet.\n8\" woofer and 1\" tweeter\nDimensions: 11\" W x 18\" H x 11\"D\nNominal power handling: 5 to 50W\nMax power: 75W\nResponse: 50Hz - 18Khz (+/- 3dB)\nBass extension: 45-48Hz (-6dB)"
   },
   {
     "id": "n1-9-bass",
@@ -65,20 +53,13 @@ export const products: Product[] = [
     "slug": "n1-9-bass",
     "tagline": "Bass Extension Module",
     "description": "Transforms the N1-9 into a full-range 3-way system. Adds weight and scale while preserving signature clarity.",
-    "longDescription": "Bass Extension Module\nA dedicated low-frequency foundation that transforms the N1-9 into a true three-way system. Adds weight, scale, and dynamic impact while preserving the N1-9's signature clarity.",
-    "price": "$TBD",
+    "longDescription": "The N1-9B is a purpose-built bass module created specifically for the N1-9. Rather than behaving like a conventional subwoofer, it integrates seamlessly to extend the system downward, transforming the N1-9 into a true three-way loudspeaker.\n\nBy handing off low frequencies below the lower midrange, the N1-9 is freed to operate as a mid-woofer, resulting in improved dynamics, reduced distortion, and greater composure at higher listening levels. The result is a deeper, more effortless presentation that maintains tonal continuity and spatial precision.\n\nDesigned as a matched extension, not a generic add-on, the N1-9B preserves the character of the N1-9 while expanding its capability for larger rooms and full-range listening.\n\nDesigned exclusively for: N1-9\nPlacement: floor-mounted, paired per channel\nResult: true three-way system with extended low-frequency and fuller mids.",
+    "price": "$1499",
     "image": "/images/products/n1-9b.png",
     "category": "Speakers",
     "features": ["Dedicated subwoofer module", "Matches N1-9 aesthetics", "Passive design"],
-    "specs": {
-      "frequencyResponse": "28Hz - 150Hz",
-      "sensitivity": "86dB @ 1W/1m",
-      "impedance": "4 Ohms nominal",
-      "cabinetType": "Sealed",
-      "drivers": "10\" Long-throw Woofer",
-      "dimensions": "20\" H x 12\" W x 14\" D",
-      "weight": "32 lbs"
-    }
+    "specs": {},
+    "specsText": "52-liter sealed Birch ply enclosure with partial MDF front baffle and full MDF rear baffle. Internal bracing.\n10\" woofer with dedicated 2-way crossover for N1-9.\nDimensions: 13\"W x 24\"H x 12\"D\nNominal power handling: 75W\nMax power: 125W\nResponse: 29-31 Hz to crossover with N1-9."
   },
   {
     "id": "s1-2",
@@ -86,20 +67,20 @@ export const products: Product[] = [
     "slug": "s1-2",
     "tagline": "Starter Stereo, Vintage Soul",
     "description": "A compact sealed bookshelf that's punchy, warm, and immediately engaging. Designed for small rooms and nearfield listening, the S1-2 delivers surprising bass presence, relaxed highs, and an inviting sound that feels bigger than it looks. Fun, forgiving, and endlessly listenable.",
-    "longDescription": "The S1-2 is an entry-level monitor designed to make music enjoyable first and impressive second. Its sealed enclosure delivers tight, confident bass with a gentle warmth contour that gives the impression of added low-end weight, often enough to make you double-check if a subwoofer is on.\n\nA unique user-selectable high-frequency voicing feature allows subtle tailoring of the top end using minimal signal-path wiring. The S1-2 uses an asymmetric crossover topology to better control high-frequency behavior in compact, nearfield application.\n\nIdeal for small rooms, desktops, and nearfield listening, the S1-2 pairs effortlessly with compact stereo amplifiers and rewards long listening sessions without fatigue.\n\nRecommended: risers or isolation pads",
-    "price": "$2499",
+    "longDescription": "The S1-2 is an entry-level monitor designed to make music enjoyable first and impressive second. Its sealed enclosure delivers tight, confident bass with a gentle warmth contour that gives the impression of added low-end weight, often enough to make you double-check if a subwoofer is on.\n\nA user-selectable high-frequency voicing feature allows subtle tailoring of the top end using minimal signal-path wiring. The S1-2 uses an asymmetric crossover topology to better control high-frequency behavior in compact, nearfield application.\n\nIdeal for small rooms, desktops, and nearfield listening, the S1-2 pairs effortlessly with compact stereo amplifiers and rewards long listening sessions without fatigue.\n\nRecommended: risers or isolation pads",
+    "price": "$599",
     "image": "/images/products/s1-2-hero.jpg",
+    "galleryImages": [
+      "/images/products/s1-2/s1-2_1.jpg",
+      "/images/products/s1-2/S1-2_2.jpg",
+      "/images/products/s1-2/S1-2_3.jpg",
+      "/images/products/s1-2/S1-2_4.jpg",
+      "/images/products/s1-2/s1-2_5.jpg"
+    ],
     "category": "Speakers",
     "features": ["Sealed nearfield design", "Adjustable HF voicing", "Compact footprint"],
-    "specs": {
-      "frequencyResponse": "55Hz - 20kHz (-3dB)",
-      "sensitivity": "85dB @ 1W/1m",
-      "impedance": "8 Ohms nominal",
-      "cabinetType": "Sealed (Acoustic Suspension)",
-      "drivers": "5.25\" Paper Cone Woofer, 0.75\" Silk Dome Tweeter",
-      "dimensions": "11\" H x 7\" W x 9\" D",
-      "weight": "12 lbs each"
-    }
+    "specs": {},
+    "specsText": "13-liter sealed MDF enclosure with CVD on panels.\n8\" woofer with 1\" poly dome tweeter.\nDimensions: 10\"W x 15\"H x 8\"D\nNominal power handling: 5 to 50W\nResponse: 55Hz - 17Khz (+/- 3dB)\nBass shelf from 80-120Hz\nBass extension: 50Hz (-6dB)"
   },
   {
     "id": "cable-riser",

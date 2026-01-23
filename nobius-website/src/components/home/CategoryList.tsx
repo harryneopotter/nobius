@@ -9,7 +9,7 @@ const categories = [
         id: 'speakers',
         name: 'Speakers',
         href: '/products/speakers',
-        description: 'Pure, musical sound reproduction that reveals the true essence of your recordings.',
+        description: 'Fun, Inviting and familiar.',
         image: '/images/products/s1-2-hero.jpg',
         alignment: 'left', // Text Left, Image Right
     },
@@ -17,7 +17,7 @@ const categories = [
         id: 'stands',
         name: 'Stands',
         href: '/products/stands',
-        description: 'Engineered isolation and support for peak acoustic performance.',
+        description: 'Engineered for acoustic control, designed for real living spaces.',
         image: '/images/products/space-saver.jpg',
         alignment: 'right', // Text Right, Image Left
     },
@@ -25,7 +25,7 @@ const categories = [
         id: 'audio-tools',
         name: 'Audio Tools',
         href: '/products/audio-tools',
-        description: 'Precision accessories designed for the critical listener.',
+        description: 'The not-so-little details that matter.',
         image: '/images/products/risers/risers4.jpg',
         alignment: 'left', // Text Left, Image Right
     }

@@ -10,8 +10,16 @@ const stands = products.filter(p => p.category === 'Stands');
 export default function StandsPage() {
     return (
         <div className="flex flex-col min-h-screen bg-stone-950">
-            <section className="relative h-[50vh] w-full overflow-hidden flex items-center justify-center bg-stone-900 border-b border-stone-800">
-                <div className="text-center px-4 z-10">
+            <section className="relative h-[60vh] w-full overflow-hidden">
+                <Image
+                    src="/images/products/spiral-stand.jpg"
+                    alt="Nobius Spiral Stands"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                />
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -24,9 +32,9 @@ export default function StandsPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="mt-6 max-w-xl mx-auto text-lg text-stone-400"
+                        className="mt-6 max-w-xl mx-auto text-lg text-stone-200"
                     >
-                        Solid foundations for sonic purity.
+                        Engineered for acoustic control, designed for real living spaces.
                     </motion.p>
                 </div>
             </section>

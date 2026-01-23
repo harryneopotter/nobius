@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0c0a09;
-  /* stone-950 */
+  --background: #2E0017;
+  /* Deep fuchsia background */
   --foreground: #f5f5f4;
   /* stone-100 */
+  --menu-bg: #480024;
+  /* Fuchsia menu */
 }
 
 @theme inline {

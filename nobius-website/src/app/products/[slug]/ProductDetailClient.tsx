@@ -167,93 +167,125 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             </section>
 
             {/* Technical Specifications */}
-            <section className="container mx-auto max-w-4xl px-4 py-16 md:px-6 md:py-24">
-                <div className="mb-12 text-center">
-                    <h2 className="font-serif text-3xl font-bold text-stone-100">
-                        Technical Specifications
-                    </h2>
-                    <p className="mt-4 text-stone-400">
-                        Precision engineering in every detail.
-                    </p>
-                </div>
+            {(product.specsText || Object.keys(product.specs || {}).length > 0) && (
+                <section className="container mx-auto max-w-4xl px-4 py-16 md:px-6 md:py-24">
+                    <div className="mb-12 text-center">
+                        <h2 className="font-serif text-3xl font-bold text-stone-100">
+                            Technical
+                        </h2>
+                    </div>
 
-                <div className="overflow-hidden rounded-xl border border-stone-800 bg-stone-900/50">
-                    <table className="w-full text-left text-sm">
-                        <tbody className="divide-y divide-stone-800">
-                            {product.specs?.frequencyResponse && (
-                                <tr className="group transition-colors hover:bg-stone-800">
-                                    <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
-                                        Frequency Response
-                                    </th>
-                                    <td className="px-6 py-4 text-stone-400">
-                                        {product.specs.frequencyResponse}
-                                    </td>
-                                </tr>
-                            )}
-                            {product.specs?.sensitivity && (
-                                <tr className="group transition-colors hover:bg-stone-800">
-                                    <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
-                                        Sensitivity
-                                    </th>
-                                    <td className="px-6 py-4 text-stone-400">
-                                        {product.specs.sensitivity}
-                                    </td>
-                                </tr>
-                            )}
-                            {product.specs?.impedance && (
-                                <tr className="group transition-colors hover:bg-stone-800">
-                                    <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
-                                        Nominal Impedance
-                                    </th>
-                                    <td className="px-6 py-4 text-stone-400">
-                                        {product.specs.impedance}
-                                    </td>
-                                </tr>
-                            )}
-                            {product.specs?.cabinetType && (
-                                <tr className="group transition-colors hover:bg-stone-800">
-                                    <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
-                                        Cabinet Architecture
-                                    </th>
-                                    <td className="px-6 py-4 text-stone-400">
-                                        {product.specs.cabinetType}
-                                    </td>
-                                </tr>
-                            )}
-                            {product.specs?.drivers && (
-                                <tr className="group transition-colors hover:bg-stone-800">
-                                    <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
-                                        Drivers
-                                    </th>
-                                    <td className="px-6 py-4 text-stone-400">
-                                        {product.specs.drivers}
-                                    </td>
-                                </tr>
-                            )}
-                            {product.specs?.dimensions && (
-                                <tr className="group transition-colors hover:bg-stone-800">
-                                    <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
-                                        Dimensions (H x W x D)
-                                    </th>
-                                    <td className="px-6 py-4 text-stone-400">
-                                        {product.specs.dimensions}
-                                    </td>
-                                </tr>
-                            )}
-                            {product.specs?.weight && (
-                                <tr className="group transition-colors hover:bg-stone-800">
-                                    <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
-                                        Weight
-                                    </th>
-                                    <td className="px-6 py-4 text-stone-400">
-                                        {product.specs.weight}
-                                    </td>
-                                </tr>
-                            )}
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                    {product.specsText ? (
+                        <div className="prose prose-invert prose-stone mx-auto max-w-2xl">
+                            {product.specsText.split('\n').map((line, idx) => (
+                                <p key={idx} className="text-stone-300 leading-relaxed mb-2">
+                                    {line}
+                                </p>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="overflow-hidden rounded-xl border border-stone-800 bg-stone-900/50">
+                            <table className="w-full text-left text-sm">
+                                <tbody className="divide-y divide-stone-800">
+                                    {product.specs?.frequencyResponse && (
+                                        <tr className="group transition-colors hover:bg-stone-800">
+                                            <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
+                                                Frequency Response
+                                            </th>
+                                            <td className="px-6 py-4 text-stone-400">
+                                                {product.specs.frequencyResponse}
+                                            </td>
+                                        </tr>
+                                    )}
+                                    {product.specs?.sensitivity && (
+                                        <tr className="group transition-colors hover:bg-stone-800">
+                                            <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
+                                                Sensitivity
+                                            </th>
+                                            <td className="px-6 py-4 text-stone-400">
+                                                {product.specs.sensitivity}
+                                            </td>
+                                        </tr>
+                                    )}
+                                    {product.specs?.impedance && (
+                                        <tr className="group transition-colors hover:bg-stone-800">
+                                            <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
+                                                Nominal Impedance
+                                            </th>
+                                            <td className="px-6 py-4 text-stone-400">
+                                                {product.specs.impedance}
+                                            </td>
+                                        </tr>
+                                    )}
+                                    {product.specs?.cabinetType && (
+                                        <tr className="group transition-colors hover:bg-stone-800">
+                                            <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
+                                                Cabinet Architecture
+                                            </th>
+                                            <td className="px-6 py-4 text-stone-400">
+                                                {product.specs.cabinetType}
+                                            </td>
+                                        </tr>
+                                    )}
+                                    {product.specs?.drivers && (
+                                        <tr className="group transition-colors hover:bg-stone-800">
+                                            <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
+                                                Drivers
+                                            </th>
+                                            <td className="px-6 py-4 text-stone-400">
+                                                {product.specs.drivers}
+                                            </td>
+                                        </tr>
+                                    )}
+                                    {product.specs?.dimensions && (
+                                        <tr className="group transition-colors hover:bg-stone-800">
+                                            <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
+                                                Dimensions (H x W x D)
+                                            </th>
+                                            <td className="px-6 py-4 text-stone-400">
+                                                {product.specs.dimensions}
+                                            </td>
+                                        </tr>
+                                    )}
+                                    {product.specs?.weight && (
+                                        <tr className="group transition-colors hover:bg-stone-800">
+                                            <th className="w-1/3 px-6 py-4 font-medium text-stone-100">
+                                                Weight
+                                            </th>
+                                            <td className="px-6 py-4 text-stone-400">
+                                                {product.specs.weight}
+                                            </td>
+                                        </tr>
+                                    )}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                </section>
+            )}
+
+            {/* Gallery Images */}
+            {product.galleryImages && product.galleryImages.length > 0 && (
+                <section className="container mx-auto max-w-6xl px-4 pb-16 md:px-6 md:pb-24">
+                    <div className="mb-12 text-center">
+                        <h2 className="font-serif text-3xl font-bold text-stone-100">
+                            Gallery
+                        </h2>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {product.galleryImages.map((img, idx) => (
+                            <div key={idx} className="relative aspect-square overflow-hidden rounded-lg bg-stone-900">
+                                <Image
+                                    src={img}
+                                    alt={`${product.name} - Image ${idx + 1}`}
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
         </div>
     );
 }
