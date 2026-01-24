@@ -55,7 +55,7 @@ export const products: Product[] = [
     "description": "Transforms the N1-9 into a full-range 3-way system. Adds weight and scale while preserving signature clarity.",
     "longDescription": "The N1-9B is a purpose-built bass module created specifically for the N1-9. Rather than behaving like a conventional subwoofer, it integrates seamlessly to extend the system downward, transforming the N1-9 into a true three-way loudspeaker.\n\nBy handing off low frequencies below the lower midrange, the N1-9 is freed to operate as a mid-woofer, resulting in improved dynamics, reduced distortion, and greater composure at higher listening levels. The result is a deeper, more effortless presentation that maintains tonal continuity and spatial precision.\n\nDesigned as a matched extension, not a generic add-on, the N1-9B preserves the character of the N1-9 while expanding its capability for larger rooms and full-range listening.\n\nDesigned exclusively for: N1-9\nPlacement: floor-mounted, paired per channel\nResult: true three-way system with extended low-frequency and fuller mids.",
     "price": "$1499",
-    "image": "/images/products/n1-9b.png",
+    "image": "/images/products/n1-9b.jpg",
     "category": "Speakers",
     "features": ["Dedicated subwoofer module", "Matches N1-9 aesthetics", "Passive design"],
     "specs": {},
