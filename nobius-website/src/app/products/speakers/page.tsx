@@ -53,7 +53,7 @@ export default function SpeakersPage() {
                             className="group flex flex-col items-center text-center max-w-xs mx-auto"
                         >
                             <Link href={`/products/${product.slug}`} className="w-full">
-                                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-black/20 mb-5">
+                                <div className="relative aspect-[8/7] w-full overflow-hidden rounded-sm bg-black/20 mb-5">
                                     <Image
                                         src={product.image}
                                         alt={product.name}
