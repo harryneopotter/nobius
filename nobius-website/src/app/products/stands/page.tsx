@@ -9,7 +9,7 @@ const stands = products.filter(p => p.category === 'Stands');
 
 export default function StandsPage() {
     return (
-        <div className="flex flex-col min-h-screen bg-stone-950">
+        <div className="flex flex-col min-h-screen">
             <section className="relative h-[60vh] w-full overflow-hidden">
                 <Image
                     src="/images/products/spiral-stand.jpg"

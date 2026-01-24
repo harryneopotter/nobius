@@ -9,7 +9,7 @@ const speakers = products.filter(p => p.category === 'Speakers' && !p.image.incl
 
 export default function SpeakersPage() {
     return (
-        <div className="flex flex-col min-h-screen bg-stone-950">
+        <div className="flex flex-col min-h-screen">
             {/* Forest Header Section */}
             <section className="relative h-[60vh] w-full overflow-hidden">
                 <Image

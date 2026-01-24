@@ -34,7 +34,7 @@ const pillars = [
 
 const CraftPillars = () => {
     return (
-        <section className="bg-stone-950 py-24 md:py-32">
+        <section className="bg-transparent py-24 md:py-32">
             <div className="container mx-auto px-4">
                 {/* Centered Header */}
                 <div className="mb-16 text-center max-w-4xl mx-auto">

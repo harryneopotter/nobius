@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-stone-800 bg-stone-950">
+    <footer className="w-full border-t border-stone-800 bg-background">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12 md:px-6">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -124,7 +124,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-stone-800/50 bg-stone-950">
+      <div className="border-t border-stone-800/50 bg-background">
         <div className="container mx-auto flex flex-col items-center justify-between gap-2 px-4 py-6 md:flex-row md:px-6">
           <p className="text-xs text-stone-500">
             © {currentYear} Nobius Audio. All Rights Reserved.

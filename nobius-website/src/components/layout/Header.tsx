@@ -98,7 +98,7 @@ const Header = () => {
                 onMouseLeave={() => setIsProductsOpen(false)}
               >
                 <div
-                  className="flex flex-col overflow-hidden rounded-xl border border-stone-800/50 bg-black/90 backdrop-blur-xl p-2 shadow-xl"
+                  className="flex flex-col overflow-hidden rounded-xl border border-stone-800/50 bg-menu/90 backdrop-blur-xl p-2 shadow-xl"
                   role="menu"
                 >
                   <Link
@@ -160,7 +160,7 @@ const Header = () => {
 
         {/* Mobile Navigation Dropdown */}
         {isMenuOpen && (
-          <nav className="absolute left-0 top-full w-full border-b border-stone-800 bg-stone-950 px-4 py-8 md:hidden">
+          <nav className="absolute left-0 top-full w-full border-b border-stone-800 bg-menu px-4 py-8 md:hidden">
             <div className="flex flex-col space-y-6">
               <Link
                 href="/"

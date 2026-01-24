@@ -85,7 +85,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
     const closeOrderForm = useCallback(() => setOrderFormOpen(false), []);
 
     return (
-        <div className="min-h-screen bg-stone-950">
+        <div className="min-h-screen">
             {/* Image Lightbox */}
             <ImageLightbox
                 src={product.image}
@@ -102,7 +102,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             />
 
             {/* Hero Section */}
-            <section className="bg-stone-950 py-16 md:py-24">
+            <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
                         {/* Product Image - Now clickable */}
