@@ -35,7 +35,7 @@ export default function SpeakersPage() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="mt-6 max-w-2xl text-lg text-stone-200 md:text-xl"
                     >
-                        Voice, shaped with intention.
+                        Timeless sound, Thoughtful design, Soulful performance
                     </motion.p>
                 </div>
             </section>
