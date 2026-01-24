@@ -7,6 +7,11 @@ import { products } from '@/data/products';
 
 const speakers = products.filter(p => p.category === 'Speakers' && !p.image.includes('placeholder'));
 
+export const metadata = {
+    title: 'Speakers | Nobius Audio',
+    description: 'Timeless sound, Thoughtful design, Soulful performance. Explore our collection of handcrafted speakers.',
+};
+
 export default function SpeakersPage() {
     return (
         <div className="flex flex-col min-h-screen">

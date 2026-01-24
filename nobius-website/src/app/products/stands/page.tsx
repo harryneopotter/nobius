@@ -7,6 +7,11 @@ import { products } from '@/data/products';
 
 const stands = products.filter(p => p.category === 'Stands');
 
+export const metadata = {
+    title: 'Stands | Nobius Audio',
+    description: 'Engineered for acoustic control, designed for real living spaces. Custom speaker stands for optimal performance.',
+};
+
 export default function StandsPage() {
     return (
         <div className="flex flex-col min-h-screen">
