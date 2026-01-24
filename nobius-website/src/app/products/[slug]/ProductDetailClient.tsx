@@ -285,7 +285,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                                     src={img}
                                     alt={`${product.name} - Image ${idx + 1}`}
                                     fill
-                                    className="object-contain p-8"
+                                    className="object-contain"
                                 />
                                 {/* Hover overlay */}
                                 <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5" />
