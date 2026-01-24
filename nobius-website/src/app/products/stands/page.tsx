@@ -51,7 +51,7 @@ export default function StandsPage() {
                             className="max-w-xs mx-auto"
                         >
                             <Link href={`/products/${product.slug}`} className="group block h-full">
-                                <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-stone-900 mb-4">
+                                <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-black/20 mb-4">
                                     <Image
                                         src={product.image}
                                         alt={product.name}

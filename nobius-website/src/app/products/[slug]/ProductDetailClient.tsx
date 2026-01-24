@@ -109,7 +109,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                         <div className="flex-1 flex justify-center">
                             <button
                                 onClick={openLightbox}
-                                className="group relative aspect-[3/4] w-full max-w-lg cursor-zoom-in overflow-hidden rounded-2xl shadow-2xl bg-stone-900 transition-transform hover:scale-[1.02]"
+                                className="group relative aspect-[3/4] w-full max-w-lg cursor-zoom-in overflow-hidden rounded-2xl shadow-2xl bg-black/20 transition-transform hover:scale-[1.02]"
                                 aria-label="Click to view full image"
                             >
                                 <Image
@@ -184,7 +184,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                             ))}
                         </div>
                     ) : (
-                        <div className="overflow-hidden rounded-xl border border-stone-800 bg-stone-900/50">
+                        <div className="overflow-hidden rounded-xl border border-stone-800 bg-black/20">
                             <table className="w-full text-left text-sm">
                                 <tbody className="divide-y divide-stone-800">
                                     {product.specs?.frequencyResponse && (
@@ -274,7 +274,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {product.galleryImages.map((img, idx) => (
-                            <div key={idx} className="relative aspect-square overflow-hidden rounded-lg bg-stone-900">
+                            <div key={idx} className="relative aspect-square overflow-hidden rounded-lg bg-black/20">
                                 <Image
                                     src={img}
                                     alt={`${product.name} - Image ${idx + 1}`}

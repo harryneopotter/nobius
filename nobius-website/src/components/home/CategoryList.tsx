@@ -76,7 +76,7 @@ const CategoryList = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="flex-1 w-full"
                     >
-                        <Link href={category.href} className="group block relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-stone-900">
+                        <Link href={category.href} className="group block relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/20">
                             <Image
                                 src={category.image}
                                 alt={category.name}
