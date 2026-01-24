@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Product } from '@/data/products';
 
 interface OrderFormProps {
@@ -16,6 +16,23 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
         phone: '',
         location: '',
     });
+
+    // Handle Escape key
+    useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') onClose();
+        };
+
+        if (isOpen) {
+            document.addEventListener('keydown', handleEscape);
+            document.body.style.overflow = 'hidden';
+        }
+
+        return () => {
+            document.removeEventListener('keydown', handleEscape);
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen, onClose]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -43,7 +60,12 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="order-form-title"
+        >
             <div
                 className="relative w-full max-w-lg rounded-2xl bg-stone-900 border border-stone-800 p-8 shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
@@ -61,7 +83,7 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
 
                 {/* Header */}
                 <div className="mb-8">
-                    <h2 className="font-serif text-2xl text-white">Contact us to Order</h2>
+                    <h2 id="order-form-title" className="font-serif text-2xl text-white">Contact us to Order</h2>
                     <p className="mt-2 text-stone-400">
                         Interested in the <span className="font-medium text-white">{product.name}</span>?
                         Fill out the form below and we'll get back to you.
