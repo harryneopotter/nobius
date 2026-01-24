@@ -76,21 +76,22 @@ interface ProductDetailClientProps {
 }
 
 export default function ProductDetailClient({ product }: ProductDetailClientProps) {
-    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
     const [orderFormOpen, setOrderFormOpen] = useState(false);
 
-    const openLightbox = useCallback(() => setLightboxOpen(true), []);
-    const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+    const openLightbox = useCallback((src: string) => setLightboxSrc(src), []);
+    const closeLightbox = useCallback(() => setLightboxSrc(null), []);
     const openOrderForm = useCallback(() => setOrderFormOpen(true), []);
     const closeOrderForm = useCallback(() => setOrderFormOpen(false), []);
 
     return (
         <div className="min-h-screen">
             {/* Image Lightbox */}
+            {/* Image Lightbox */}
             <ImageLightbox
-                src={product.image}
+                src={lightboxSrc || ''}
                 alt={product.name}
-                isOpen={lightboxOpen}
+                isOpen={!!lightboxSrc}
                 onClose={closeLightbox}
             />
 
@@ -108,7 +109,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                         {/* Product Image - Now clickable */}
                         <div className="flex-1 flex justify-center">
                             <button
-                                onClick={openLightbox}
+                                onClick={() => openLightbox(product.image)}
                                 className="group relative aspect-[3/4] w-full max-w-lg cursor-zoom-in overflow-hidden rounded-2xl shadow-2xl bg-black/20 transition-transform hover:scale-[1.02]"
                                 aria-label="Click to view full image"
                             >
@@ -274,14 +275,21 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {product.galleryImages.map((img, idx) => (
-                            <div key={idx} className="relative aspect-square overflow-hidden rounded-lg bg-black/20">
+                            <button
+                                key={idx}
+                                onClick={() => openLightbox(img)}
+                                className="group relative aspect-square w-full overflow-hidden rounded-lg bg-black/20 transition-transform hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-stone-500"
+                                aria-label={`View gallery image ${idx + 1}`}
+                            >
                                 <Image
                                     src={img}
                                     alt={`${product.name} - Image ${idx + 1}`}
                                     fill
-                                    className="object-cover hover:scale-105 transition-transform duration-500"
+                                    className="object-contain p-8"
                                 />
-                            </div>
+                                {/* Hover overlay */}
+                                <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5" />
+                            </button>
                         ))}
                     </div>
                 </section>
