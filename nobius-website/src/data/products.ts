@@ -34,11 +34,7 @@ export const products: Product[] = [
     "specsText": "19-liter sealed enclosure with Birch ply cabinet and MDF baffles (front and rear).\n8\" Woofer and 1\" silk dome tweeter\nDimensions: 10\" W x 14\" H x 9\" D\nNominal power handling: 5 to 50W\nMax power: Without N1-9B: 75W | With N1-9B: 200W\nResponse: 60Hz - 17Khz (+/- 3dB)\nBass extension: ~ 55Hz (-6dB)"
   },
   {
-    "id": "n2-5",
-    "name": "N2-5",
-    "slug": "n2-5",
-    "tagline": "Contemporary Accuracy, Familiar Soul",
-    "description": "A modern evolution with greater scale and control. Clean, composed, and room-filling, the N2-5 blends contemporary accuracy with the musical DNA of the N1-9.",
+    "description": "A modern evolution with greater scale and control. Clean, composed, and room-filling, the N2-5 blends precise accuracy with the musical DNA of the N1-9.",
     "longDescription": "Its voicing is clean and contemporary, designed for listeners who value accuracy and balance without sacrificing musical engagement.\n\nThe N2-5 scales well with amplification and is capable of filling small to medium rooms confidently, with or without a subwoofer. Positioned as a more polished and capable evolution of the S1-2 concept, the N2-5 offers precision without sterility and clarity without fatigue.\n\nRecommended: speaker stands",
     "price": "$1999",
     "image": "/images/products/n2-5.jpg",
