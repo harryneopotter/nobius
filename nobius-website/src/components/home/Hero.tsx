@@ -74,7 +74,7 @@ const Hero = () => {
                     className="mb-10 max-w-2xl text-lg leading-relaxed text-stone-200 md:text-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
                 >
                     Audio Equipment designed for the love of music,
-                    built with disciplined engineering and artisanal care.
+                   built with disciplined engineering and artisanal care.
                 </motion.p>
 
                 <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center gap-6">
