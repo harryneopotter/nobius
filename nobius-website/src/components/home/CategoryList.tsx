@@ -9,7 +9,7 @@ const categories = [
         id: 'speakers',
         name: 'Speakers',
         href: '/products/speakers',
-        description: 'Fun, Inviting and familiar.',
+        description: 'Fun, inviting's and familiar',
         image: '/images/products/s1-2-hero.jpg',
         alignment: 'left', // Text Left, Image Right
     },
