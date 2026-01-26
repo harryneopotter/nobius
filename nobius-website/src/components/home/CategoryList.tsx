@@ -25,7 +25,7 @@ const categories = [
         id: 'audio-tools',
         name: 'Audio Tools',
         href: '/products/audio-tools',
-        description: 'The not-so-little details that matter.',
+        description: 'The not-so-little details that matter..',
         image: '/images/products/risers/risers4.jpg',
         alignment: 'left', // Text Left, Image Right
     }
