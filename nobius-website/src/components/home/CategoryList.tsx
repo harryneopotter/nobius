@@ -17,7 +17,7 @@ const categories = [
         id: 'stands',
         name: 'Stands',
         href: '/products/stands',
-        description: 'Engineered for accoustic control, designed for real living spaces.',
+        description: 'Engineered for acoustic control, designed for real living spaces.',
         image: '/images/products/space-saver.jpg',
         alignment: 'right', // Text Right, Image Left
     },
