@@ -197,7 +197,7 @@ export default function WhyNobiusPage() {
                             className="space-y-6"
                         >
                             <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Craft & Design</span>
-                            <h2 className="font-serif text-4xl md:text-5xl text-white">Built by Hand in Illinois</h2>
+                            <h2 id="section-craft" className="font-serif text-4xl md:text-5xl text-white">Built by Hand in Illinois</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
                                     Every Nobius speaker is assembled in our Lake in the Hills, IL workshop. One person, start to finish. From selecting the wood and running the CNC to cutting damping material and applying finish, nothing gets outsourced.
@@ -229,7 +229,7 @@ export default function WhyNobiusPage() {
                             viewport={{ once: true }}
                             className="lg:order-2 space-y-6"
                         >
-                            <h2 className="font-serif text-4xl md:text-5xl text-white">Driver Selection & Voicing</h2>
+                            <h2 id="section-driver" className="font-serif text-4xl md:text-5xl text-white">Driver Selection & Voicing</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
                                     We tested over 20 woofer and tweeter combinations to find modern drivers that capture the character of vintage legends like the KEF B200 and Audax HD20.
@@ -262,7 +262,7 @@ export default function WhyNobiusPage() {
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <h2 className="font-serif text-4xl md:text-5xl text-white">Crossover Execution</h2>
+                            <h2 id="section-crossover" className="font-serif text-4xl md:text-5xl text-white">Crossover Execution</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
                                     Every crossover goes through the same process: simulate, measure, listen, refine. Repeat until it sounds right. Not just on paper but in the room, with real music.
@@ -296,7 +296,7 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center max-w-3xl mx-auto mb-16"
                     >
-                        <h2 className="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">Who We Are</h2>
+                        <h2 id="section-who" className="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">Who We Are</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -348,7 +348,7 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center max-w-3xl mx-auto mb-16"
                     >
-                        <h2 className="font-serif text-4xl md:text-5xl text-white mt-4">Our Philosophy</h2>
+                        <h2 id="section-philosophy" className="font-serif text-4xl md:text-5xl text-white mt-4">Our Philosophy</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
