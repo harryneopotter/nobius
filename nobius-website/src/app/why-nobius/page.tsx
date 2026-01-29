@@ -174,7 +174,7 @@ export default function WhyNobiusPage() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="font-serif text-5xl md:text-7xl font-medium text-white mb-6"
                     >
-                        ${content.hero.title}
+                        {content.hero.title}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,7 @@ export default function WhyNobiusPage() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-lg md:text-xl font-light text-stone-300"
                     >
-                        ${content.hero.subtitle}
+                        {content.hero.subtitle}
                     </motion.p>
                 </div>
             </section>
