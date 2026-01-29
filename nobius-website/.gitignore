@@ -43,6 +43,9 @@ issues/
 .vercel
 temp_products.txt
 review.jpg
+# context/docs
+CODEX_CLI_IMPLEMENTATION.md
+NOBIUS_BOT_OVERVIEW.md
 critical-issues.md
 client-site-implementation.md
 build_error.txt

@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import content from '@/data/why-nobius.json';
 
 // Image Gallery Component with Crossfade Transition
 function ImageGallery({ images, title }: { images: string[]; title: string }) {
@@ -173,7 +174,7 @@ export default function WhyNobiusPage() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="font-serif text-5xl md:text-7xl font-medium text-white mb-6"
                     >
-                        Why Nobius
+                        ${content.hero.title}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -181,7 +182,7 @@ export default function WhyNobiusPage() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-lg md:text-xl font-light text-stone-300"
                     >
-                        Built by hand. Tuned by ear. Loved by music.
+                        ${content.hero.subtitle}
                     </motion.p>
                 </div>
             </section>
@@ -196,14 +197,14 @@ export default function WhyNobiusPage() {
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">Craft & Design</span>
-                            <h2 id="section-craft" className="font-serif text-4xl md:text-5xl text-white">Built by Hand in Illinois</h2>
+                            <span className="text-blue-400 font-bold tracking-widest uppercase text-sm">{content.sections.craft.tag}</span>
+                            <h2 id="section-craft" className="font-serif text-4xl md:text-5xl text-white">{content.sections.craft.title}</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
-                                    Every Nobius speaker is assembled in our Lake in the Hills, IL workshop. One person, start to finish. From selecting the wood and running the CNC to cutting damping material and applying finish, nothing gets outsourced.
+                                    {content.sections.craft.p1}
                                 </p>
                                 <p>
-                                    The cabinets use a mix of old and new techniques: mitered plywood with rounded edges, dado-cut MDF panels, front and rear baffles mounted on hardwood battens for a tight seal. Damping is hand-cut and placed where it needs to be. Finishes are done in-house, one speaker at a time.
+                                    {content.sections.craft.p2}
                                 </p>
                             </div>
                         </motion.div>
@@ -229,13 +230,13 @@ export default function WhyNobiusPage() {
                             viewport={{ once: true }}
                             className="lg:order-2 space-y-6"
                         >
-                            <h2 id="section-driver" className="font-serif text-4xl md:text-5xl text-white">Driver Selection & Voicing</h2>
+                            <h2 id="section-driver" className="font-serif text-4xl md:text-5xl text-white">{content.sections.driver.title}</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
-                                    We tested over 20 woofer and tweeter combinations to find modern drivers that capture the character of vintage legends like the KEF B200 and Audax HD20.
+                                    {content.sections.driver.p1}
                                 </p>
                                 <p>
-                                    Voicing is designed to suit the model. Every N1-9 sounds like an N1-9. Each speaker is broken in and re-measured after assembly. If a driver falls outside spec, it gets replaced. We verify voicing through listening panels, room tests, and feedback from the community.
+                                    {content.sections.driver.p2}
                                 </p>
                             </div>
                         </motion.div>
@@ -262,16 +263,16 @@ export default function WhyNobiusPage() {
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <h2 id="section-crossover" className="font-serif text-4xl md:text-5xl text-white">Crossover Execution</h2>
+                            <h2 id="section-crossover" className="font-serif text-4xl md:text-5xl text-white">{content.sections.crossover.title}</h2>
                             <div className="space-y-4 text-stone-400 leading-relaxed">
                                 <p>
-                                    Every crossover goes through the same process: simulate, measure, listen, refine. Repeat until it sounds right. Not just on paper but in the room, with real music.
+                                    {content.sections.crossover.p1}
                                 </p>
                                 <p>
-                                    The S1-2 is a good example. We generally prefer simple signal paths, but extensive testing and listener feedback pushed us toward an asymmetric crossover topology. It wasn't the easiest choice, but it consistently sounded better in blind tests. So we went with what worked.
+                                    {content.sections.crossover.p2}
                                 </p>
                                 <p>
-                                    All crossovers are built on custom PCBs using measured components within tight tolerances. Each board is hand-soldered and mechanically isolated to reduce vibration. The goal is long-term stability and signal integrity.
+                                    {content.sections.crossover.p3}
                                 </p>
                             </div>
                         </motion.div>
@@ -296,15 +297,11 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center max-w-3xl mx-auto mb-16"
                     >
-                        <h2 id="section-who" className="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">Who We Are</h2>
+                        <h2 id="section-who" className="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">{content.sections.who_we_are.title}</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                        {[
-                            { title: "Woodworking", desc: "Decades of custom woodworking and audio component builds." },
-                            { title: "Automotive Re-manufacturing & Design", desc: "25+ years in restorative processes, design, and R&D. A lifelong audio enthusiast." },
-                            { title: "Aerospace & RF Engineering", desc: "18+ years of innovation in in-flight entertainment and satellite systems with multiple patents. Technical design rooted in reliability and performance." },
-                        ].map((item, i) => (
+                        {content.sections.who_we_are.bios.map((item, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
@@ -334,7 +331,7 @@ export default function WhyNobiusPage() {
                         viewport={{ once: true }}
                         className="text-center text-stone-400 mt-12 max-w-2xl mx-auto"
                     >
-                        We're builders, music lovers, and engineers who believe in doing things proper: Good materials, quality sound, timeless craftsmanship.
+                        {content.sections.who_we_are.subtitle}
                     </motion.p>
                 </div>
             </section>
@@ -352,24 +349,7 @@ export default function WhyNobiusPage() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        {[
-                            {
-                                title: "We design speakers that make music fun.",
-                                desc: "If it doesn't make you think, \"What track should I play next?\", it's not done yet."
-                            },
-                            {
-                                title: "We avoid unnecessary complexity.",
-                                desc: "We don't chase numbers no one can hear. If a resonance is inaudible, it's solved."
-                            },
-                            {
-                                title: "We build for the long term.",
-                                desc: "Like the classics we admire, Nobius speakers are designed to last; and be passed down."
-                            },
-                            {
-                                title: "We respect your Listening space.",
-                                desc: "It is sacred and full of meaningful things. Every piece matters. We're asking for a spot in your collection, and we don't take that lightly. What we offer is affordable, high-quality sound that earns its place."
-                            },
-                        ].map((item, i) => (
+                        {content.sections.philosophy.items.map((item, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}

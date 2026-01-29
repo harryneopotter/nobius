@@ -1,0 +1,64 @@
+{
+    "hero": {
+        "title": "Why Nobius",
+        "subtitle": "Built by hand. Tuned by ear. Loved by music."
+    },
+    "sections": {
+        "craft": {
+            "tag": "Craft & Design",
+            "title": "Built by Hand in Illinois",
+            "p1": "Every Nobius speaker is assembled in our Lake in the Hills, IL workshop. One person, start to finish. From selecting the wood and running the CNC to cutting damping material and applying finish, nothing gets outsourced.",
+            "p2": "The cabinets use a mix of old and new techniques: mitered plywood with rounded edges, dado-cut MDF panels, front and rear baffles mounted on hardwood battens for a tight seal. Damping is hand-cut and placed where it needs to be. Finishes are done in-house, one speaker at a time."
+        },
+        "driver": {
+            "title": "Driver Selection & Voicing",
+            "p1": "We tested over 20 woofer and tweeter combinations to find modern drivers that capture the character of vintage legends like the KEF B200 and Audax HD20.",
+            "p2": "Voicing is designed to suit the model. Every N1-9 sounds like an N1-9. Each speaker is broken in and re-measured after assembly. If a driver falls outside spec, it gets replaced. We verify voicing through listening panels, room tests, and feedback from the community."
+        },
+        "crossover": {
+            "title": "Crossover Execution",
+            "p1": "Every crossover goes through the same process: simulate, measure, listen, refine. Repeat until it sounds right. Not just on paper but in the room, with real music.",
+            "p2": "The S1-2 is a good example. We generally prefer simple signal paths, but extensive testing and listener feedback pushed us toward an asymmetric crossover topology. It wasn't the easiest choice, but it consistently sounded better in blind tests. So we went with what worked.",
+            "p3": "All crossovers are built on custom PCBs using measured components within tight tolerances. Each board is hand-soldered and mechanically isolated to reduce vibration. The goal is long-term stability and signal integrity."
+        },
+        "who_we_are": {
+            "title": "Who We Are",
+            "subtitle": "We're builders, music lovers, and engineers who believe in doing things proper: Good materials, quality sound, timeless craftsmanship.",
+            "bios": [
+                {
+                    "title": "Woodworking",
+                    "desc": "Decades of custom woodworking and audio component builds."
+                },
+                {
+                    "title": "Automotive Re-manufacturing & Design",
+                    "desc": "25+ years in restorative processes, design, and R&D. A lifelong audio enthusiast."
+                },
+                {
+                    "title": "Aerospace & RF Engineering",
+                    "desc": "18+ years of innovation in in-flight entertainment and satellite systems with multiple patents. Technical design rooted in reliability and performance."
+                }
+            ]
+        },
+        "philosophy": {
+            "title": "Our Philosophy",
+            "items": [
+                {
+                    "title": "We design speakers that make music fun.",
+                    "desc": "If it doesn't make you think, \"What track should I play next?\", it's not done yet."
+                },
+                {
+                    "title": "We avoid unnecessary complexity.",
+                    "desc": "We don't chase numbers no one can hear. If a resonance is inaudible, it's solved."
+                },
+                {
+                    "title": "We build for the long term.",
+                    "desc": "Like the classics we admire, Nobius speakers are designed to last; and be passed down."
+                },
+                {
+                    "title": "We respect your Listening space.",
+                    "desc": "It is sacred and full of meaningful things. Every piece matters. We're asking for a spot in your collection, and we don't take that lightly. What we offer is affordable, high-quality sound that earns its place."
+                }
+            ]
+        }
+    }
+}
