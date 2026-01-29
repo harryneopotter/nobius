@@ -3,7 +3,30 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import content from '@/data/why-nobius.json';
+import contentData from '@/data/why-nobius.json';
+
+interface WhyNobiusContent {
+    hero: {
+        title: string;
+        subtitle: string;
+    };
+    sections: {
+        craft: { tag: string; title: string; p1: string; p2: string; };
+        driver: { title: string; p1: string; p2: string; };
+        crossover: { title: string; p1: string; p2: string; p3: string; };
+        who_we_are: {
+            title: string;
+            subtitle: string;
+            bios: Array<{ title: string; desc: string; }>;
+        };
+        philosophy: {
+            title: string;
+            items: Array<{ title: string; desc: string; }>;
+        };
+    };
+}
+
+const content = contentData as unknown as WhyNobiusContent;
 
 // Image Gallery Component with Crossfade Transition
 function ImageGallery({ images, title }: { images: string[]; title: string }) {
