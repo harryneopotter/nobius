@@ -10,7 +10,8 @@
             "p1": "Every Nobius speaker is assembled in our Lake in the Hills, IL workshop. One person, start to finish. From selecting the wood and running the CNC to cutting damping material and applying finish, nothing gets outsourced.",
             "p2": "The cabinets use a mix of old and new techniques: mitered plywood with rounded edges, dado-cut MDF panels, front and rear baffles mounted on hardwood battens for a tight seal. Damping is hand-cut and placed where it needs to be. Finishes are done in-house, one speaker at a time."
         },
-        "title": "Driver Selection and Voicing",
+        "driver": {
+            "title": "Driver Selection and Voicing",
             "p1": "We tested over 20 woofer and tweeter combinations to find modern drivers that capture the character of vintage legends like the KEF B200 and Audax HD20.",
             "p2": "Voicing is designed to suit the model. Every N1-9 sounds like an N1-9. Each speaker is broken in and re-measured after assembly. If a driver falls outside spec, it gets replaced. We verify voicing through listening panels, room tests, and feedback from the community."
         },
