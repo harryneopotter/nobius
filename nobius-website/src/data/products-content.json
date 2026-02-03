@@ -1,0 +1,190 @@
+[
+    {
+        "id": "n1-9",
+        "name": "N1-9",
+        "slug": "n1-9",
+        "tagline": "Natural. Refined. Intimate.",
+        "description": "A reference bookshelf inspired by classic BBC voicing. Linear, vocal-focused, and spacious, the N1-9 delivers clarity and imaging with a calm, composed presentation.",
+        "longDescription": "The N1-9 is the tonal reference of the Nobius lineup. Voiced with a classic, BBC-inspired balance, it prioritizes midrange accuracy, vocal presence, and spatial coherence. The presentation is airy and controlled, with a gentle high-frequency roll-off that favors realism and long-term comfort over spectacle.\n\nDesigned for vintage sources, vinyl playback, and classic amplifiers, the N1-9 is equally at home in studio-leaning and audiophile systems. Its linear response and disciplined voicing make it ideal for desktop setups through medium-sized rooms.\n\nThe N1-9 can be expanded with the matching N1-9B bass module, transforming the system into a true three-way design while preserving the speaker's tonal integrity and imaging.\n\nRecommended: speaker risers\nExpandable: with N1-9B bass module",
+        "image": "/images/products/n1-9.jpg",
+        "category": "Speakers",
+        "features": [
+            "BBC-inspired voicing",
+            "Paper cone midrange",
+            "Baltic Birch cabinet"
+        ],
+        "specs": {},
+        "specsText": "19-liter sealed enclosure with Birch ply cabinet and MDF baffles (front and rear).\n8\" Woofer and 1\" silk dome tweeter\nDimensions: 10\" W x 14\" H x 9\" D\nNominal power handling: 5 to 50W\nMax power: Without N1-9B: 75W | With N1-9B: 200W\nResponse: 60Hz - 17Khz (+/- 3dB)\nBass extension: ~ 55Hz (-6dB)"
+    },
+    {
+        "id": "n2-5",
+        "name": "N2-5",
+        "slug": "n2-5",
+        "tagline": "Contemporary Accuracy, Familiar Soul",
+        "description": "A modern evolution with greater scale and control. Clean, composed, and room-filling, the N2-5 blends precise accuracy with the musical DNA of the N1-9.",
+        "longDescription": "Its voicing is clean and contemporary, designed for listeners who value accuracy and balance without sacrificing musical engagement.\n\nThe N2-5 scales well with amplification and is capable of filling small to medium rooms confidently, with or without a subwoofer. Positioned as a more polished and capable evolution of the S1-2 concept, the N2-5 offers precision without sterility and clarity without fatigue.\n\nRecommended: speaker stands",
+        "image": "/images/products/n2-5.jpg",
+        "category": "Speakers",
+        "features": [
+            "Modern neutral voicing",
+            "Extended bass response",
+            "High power handling"
+        ],
+        "specs": {},
+        "specsText": "25-liter sealed MDF enclosure with floating baffle. Internal brace to dampen cabinet.\n8\" woofer and 1\" tweeter\nDimensions: 11\" W x 18\" H x 11\"D\nNominal power handling: 5 to 50W\nMax power: 75W\nResponse: 50Hz - 18Khz (+/- 3dB)\nBass extension: 45-48Hz (-6dB)"
+    },
+    {
+        "id": "n1-9-bass",
+        "name": "N1-9 Bass",
+        "slug": "n1-9-bass",
+        "tagline": "Bass Extension Module",
+        "description": "Transforms the N1-9 into a full-range 3-way system. Adds weight and scale while preserving signature clarity.",
+        "longDescription": "The N1-9B is a purpose-built bass module created specifically for the N1-9. Rather than behaving like a conventional subwoofer, it integrates seamlessly to extend the system downward, transforming the N1-9 into a true three-way loudspeaker.\n\nBy handing off low frequencies below the lower midrange, the N1-9 is freed to operate as a mid-woofer, resulting in improved dynamics, reduced distortion, and greater composure at higher listening levels. The result is a deeper, more effortless presentation that maintains tonal continuity and spatial precision.\n\nDesigned as a matched extension, not a generic add-on, the N1-9B preserves the character of the N1-9 while expanding its capability for larger rooms and full-range listening.\n\nDesigned exclusively for: N1-9\nPlacement: floor-mounted, paired per channel\nResult: true three-way system with extended low-frequency and fuller mids.",
+        "image": "/images/products/n1-9b.jpg",
+        "category": "Speakers",
+        "features": [
+            "Dedicated subwoofer module",
+            "Matches N1-9 aesthetics",
+            "Passive design"
+        ],
+        "specs": {},
+        "specsText": "52-liter sealed Birch ply enclosure with partial MDF front baffle and full MDF rear baffle. Internal bracing.\n10\" woofer with dedicated 2-way crossover for N1-9.\nDimensions: 13\"W x 24\"H x 12\"D\nNominal power handling: 75W\nMax power: 125W\nResponse: 29-31 Hz to crossover with N1-9."
+    },
+    {
+        "id": "s1-2",
+        "name": "S1-2",
+        "slug": "s1-2",
+        "tagline": "Starter Stereo, Vintage Soul",
+        "description": "A compact sealed bookshelf that's punchy, warm, and immediately engaging. Designed for small rooms and nearfield listening, the S1-2 delivers surprising bass presence, relaxed highs, and an inviting sound that feels bigger than it looks. Fun, forgiving, and endlessly listenable.",
+        "longDescription": "The S1-2 is an entry-level monitor designed to make music enjoyable first and impressive second. Its sealed enclosure delivers tight, confident bass with a gentle warmth contour that gives the impression of added low-end weight, often enough to make you double-check if a subwoofer is on.\n\nA user-selectable high-frequency voicing feature allows subtle tailoring of the top end using minimal signal-path wiring. The S1-2 uses an asymmetric crossover topology to better control high-frequency behavior in compact, nearfield application.\n\nIdeal for small rooms, desktops, and nearfield listening, the S1-2 pairs effortlessly with compact stereo amplifiers and rewards long listening sessions without fatigue.\n\nRecommended: risers or isolation pads",
+        "image": "/images/products/s1-2-hero.jpg",
+        "galleryImages": [
+            "/images/products/s1-2/s1-2_1.jpg",
+            "/images/products/s1-2/S1-2_2.jpg",
+            "/images/products/s1-2/S1-2_3.jpg",
+            "/images/products/s1-2/S1-2_4.jpg",
+            "/images/products/s1-2/s1-2_5.jpg"
+        ],
+        "category": "Speakers",
+        "features": [
+            "Sealed nearfield design",
+            "Adjustable HF voicing",
+            "Compact footprint"
+        ],
+        "specs": {},
+        "specsText": "13-liter sealed MDF enclosure with CVD on panels.\n8\" woofer with 1\" poly dome tweeter.\nDimensions: 10\"W x 15\"H x 8\"D\nNominal power handling: 5 to 50W\nResponse: 55Hz - 17Khz (+/- 3dB)\nBass shelf from 80-120Hz\nBass extension: 50Hz (-6dB)"
+    },
+    {
+        "id": "cable-riser",
+        "name": "Cable Risers",
+        "slug": "cable-riser",
+        "tagline": "Elevate Your Cables",
+        "description": "Handcrafted wooden cable risers in 1, 2, or 3-cable configurations. Heights from 2.5 to 6 inches.",
+        "longDescription": "Our cable risers are handcrafted from select hardwoods with artisan detailing. Available in single, double, and triple cable configurations with adjustable heights from 2.5 to 6 inches. Keeps your audio cables elevated and organized while adding a touch of craftsmanship to your listening space.",
+        "image": "/images/products/risers/risers1.jpg",
+        "category": "Audio Tools",
+        "features": [
+            "Handcrafted hardwood",
+            "1, 2, or 3 cable slots",
+            "2.5\" - 6\" height options",
+            "Multiple wood finishes"
+        ],
+        "specs": {
+            "material": "Select hardwoods (Walnut, Oak, Maple)",
+            "configurations": "1, 2, or 3 cable slots",
+            "heightRange": "2.5\" - 6\"",
+            "finish": "Hand-rubbed oil finish"
+        }
+    },
+    {
+        "id": "speaker-riser",
+        "name": "Speaker Risers",
+        "slug": "speaker-riser",
+        "tagline": "Precision Angle Adjustment",
+        "description": "Adjustable speaker risers with +/- 8° or +/- 13° angle options. Optimizes speaker positioning for your listening position.",
+        "longDescription": "Fine-tune your speaker angle with our precision-crafted speaker risers. Available in +/- 8°, +/- 13°, or flat (0°) configurations to optimize the soundstage for your specific listening position. Machined for stability and acoustic isolation.",
+        "image": "/images/placeholder.jpg",
+        "category": "Audio Tools",
+        "features": [
+            "Adjustable angle options",
+            "Precision machined",
+            "Acoustic isolation",
+            "Universal fit"
+        ],
+        "specs": {
+            "angleOptions": "+/- 8°, +/- 13°, or 0° (flat)",
+            "material": "Machined aluminum with isolation pads",
+            "loadCapacity": "Up to 50 lbs per riser"
+        }
+    },
+    {
+        "id": "spiral-stands",
+        "name": "Spiral Stands",
+        "slug": "spiral-stands",
+        "tagline": "Elegant Modular Design",
+        "description": "Customizable spiral speaker stands with adjustable height. Combines minimalist aesthetics with exceptional stability.",
+        "longDescription": "Our Spiral Stands feature a unique helical design that provides both rigidity and visual elegance. The modular construction allows height adjustment to optimize speaker placement for your listening position. Available in multiple finishes to complement any décor.",
+        "image": "/images/products/spiral-stands.jpg",
+        "category": "Stands",
+        "features": [
+            "Adjustable height",
+            "Modular design",
+            "Vibration dampening",
+            "Multiple finishes"
+        ],
+        "specs": {
+            "material": "Powder-coated steel",
+            "heightRange": "24\" - 36\" adjustable",
+            "baseDiameter": "12\"",
+            "loadCapacity": "50 lbs per stand",
+            "weight": "15 lbs each"
+        }
+    },
+    {
+        "id": "space-saver",
+        "name": "Space Saver",
+        "slug": "space-saver",
+        "tagline": "Complete Audio Solution",
+        "description": "All-in-one stand system integrating receiver, amplifier, and bookshelf speakers in a compact footprint.",
+        "longDescription": "The Space Saver is our most versatile stand system, designed for complete audio setups in compact spaces. Each shelf is independently adjustable with vibration-dampening rubber isolation. Perfect for apartments, offices, or anywhere space is at a premium.",
+        "image": "/images/products/space-saver.jpg",
+        "category": "Stands",
+        "features": [
+            "Integrated equipment shelves",
+            "Compact footprint",
+            "Speaker platforms",
+            "Cable management"
+        ],
+        "specs": {
+            "dimensions": "36\" H x 24\" W x 16\" D",
+            "material": "Steel frame with MDF shelves",
+            "loadCapacity": "75 lbs per shelf",
+            "shelves": "3 adjustable shelves",
+            "assembly": "30 minutes, tools included"
+        }
+    },
+    {
+        "id": "n5-2",
+        "name": "N5-2",
+        "slug": "n5-2",
+        "tagline": "2-Way Large bookshelf or floor stander for musicality and depth",
+        "description": "2-Way Large bookshelf or floor stander for musicality and depth. Sealed.",
+        "longDescription": "2-Way Large bookshelf or floor stander for musicality and depth. Sealed.",
+        "image": "/images/placeholder.jpg",
+        "category": "Speakers",
+        "features": [],
+        "specs": {}
+    },
+    {
+        "id": "s1-7",
+        "name": "S1-7",
+        "slug": "s1-7",
+        "tagline": "Starter/Stereo series for phase alignment and timing",
+        "description": "Starter/Stereo series for phase alignment and timing. Sealed",
+        "longDescription": "Starter/Stereo series for phase alignment and timing. Sealed",
+        "image": "/images/placeholder.jpg",
+        "category": "Speakers",
+        "features": [],
+        "specs": {}
+    }
+]
