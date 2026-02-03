@@ -46,7 +46,7 @@ export const products: Product[] = [
     "tagline": "Contemporary Accuracy, Familiar Soul",
     "description": "A modern evolution with greater scale and control. Clean, composed, and room-filling, the N2-5 blends precise accuracy with the musical DNA of the N1-9.",
     "longDescription": "Its voicing is clean and contemporary, designed for listeners who value accuracy and balance without sacrificing musical engagement.\n\nThe N2-5 scales well with amplification and is capable of filling small to medium rooms confidently, with or without a subwoofer. Positioned as a more polished and capable evolution of the S1-2 concept, the N2-5 offers precision without sterility and clarity without fatigue.\n\nRecommended: speaker stands",
-    "price": "$1999",
+    "price": "$1999199",
     "image": "/images/products/n2-5.jpg",
     "category": "Speakers",
     "features": ["Modern neutral voicing", "Extended bass response", "High power handling"],
