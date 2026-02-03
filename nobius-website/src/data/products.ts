@@ -18,7 +18,14 @@ export interface Product {
   specsText?: string;
 }
 
-export const products: Product[] = [
+// Import prices from separate config file (easier for bot to update)
+import pricesData from './prices.json';
+
+// Type for the prices config
+type PricesConfig = { [key: string]: string };
+const prices: PricesConfig = pricesData;
+
+const baseProducts: Product[] = [
   {
     "id": "n1-9",
     "name": "N1-9",
@@ -182,3 +189,9 @@ export const products: Product[] = [
     "specs": {}
   }
 ];
+
+// Merge prices from config at build time
+export const products: Product[] = baseProducts.map(product => ({
+  ...product,
+  price: prices[product.id] || product.price
+}));
