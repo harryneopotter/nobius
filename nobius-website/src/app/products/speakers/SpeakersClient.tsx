@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { products } from '@/data/products';
+import pagesContent from '@/data/pages-content.json';
 
 const speakers = products.filter(p => p.category === 'Speakers' && !p.image.includes('placeholder'));
+const content = pagesContent.speakers;
 
 export default function SpeakersClient() {
     return (
@@ -27,7 +29,7 @@ export default function SpeakersClient() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="font-serif text-5xl font-medium text-white md:text-7xl lg:text-8xl"
                     >
-                        Speakers
+                        {content.heroTitle}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -35,7 +37,7 @@ export default function SpeakersClient() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="mt-6 max-w-2xl text-lg text-stone-200 md:text-xl"
                     >
-                        Timeless sound, Thoughtful design, Soulful performance
+                        {content.heroSubtitle}
                     </motion.p>
                 </div>
             </section>

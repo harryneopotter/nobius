@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import pagesContent from '@/data/pages-content.json';
+
+const content = pagesContent.footer;
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,8 +24,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm text-stone-400 leading-relaxed">
-              Handcrafted audio equipment built with care in Illinois.
-              Pure sound, refined performance.
+              {content.brandDescription}
             </p>
           </div>
 
@@ -105,19 +107,19 @@ const Footer = () => {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
               </svg>
-              Handcrafted in Illinois
+              {content.badge1}
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
-              Premium Materials
+              {content.badge2}
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
               </svg>
-              Built with Care
+              {content.badge3}
             </span>
           </div>
         </div>

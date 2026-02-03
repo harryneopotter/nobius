@@ -4,11 +4,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { products } from '@/data/products';
+import pagesContent from '@/data/pages-content.json';
 
-const tools = products.filter(p => p.category === 'Audio Tools' || p.category === 'Tool');
-// Ensure category match. Script output 'Tool' might be mapped to 'Audio Tools' or just 'Tool'.
-// In extract script: category: p[2] === 'Speaker' ? 'Speakers' : (p[2] === 'Stand' ? 'Stands' : 'Audio Tools')
-// So it should be 'Audio Tools'.
+const tools = products.filter(p => p.category === 'Audio Tools');
+const content = pagesContent.audioTools;
 
 export default function AudioToolsPage() {
     return (
@@ -21,7 +20,7 @@ export default function AudioToolsPage() {
                         transition={{ duration: 0.8 }}
                         className="font-serif text-5xl font-medium text-white md:text-7xl"
                     >
-                        Audio Tools
+                        {content.heroTitle}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -29,7 +28,7 @@ export default function AudioToolsPage() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="mt-6 max-w-xl mx-auto text-lg text-stone-400"
                     >
-                        Essential accessories for the dedicated listener.
+                        {content.heroSubtitle}
                     </motion.p>
                 </div>
             </section>

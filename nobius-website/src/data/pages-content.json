@@ -1,0 +1,24 @@
+{
+    "speakers": {
+        "heroTitle": "Speakers",
+        "heroSubtitle": "Timeless sound, Thoughtful design, Soulful performance"
+    },
+    "stands": {
+        "heroTitle": "Stands",
+        "heroSubtitle": "Engineered for acoustic control, designed for real living spaces."
+    },
+    "audioTools": {
+        "heroTitle": "Audio Tools",
+        "heroSubtitle": "Essential accessories for the dedicated listener."
+    },
+    "contact": {
+        "pageTitle": "Get in Touch",
+        "pageSubtitle": "Questions about our speakers? Interested in a custom finish? We'd love to hear from you."
+    },
+    "footer": {
+        "brandDescription": "Handcrafted audio equipment built with care in Illinois. Pure sound, refined performance.",
+        "badge1": "Handcrafted in Illinois",
+        "badge2": "Premium Materials",
+        "badge3": "Built with Care"
+    }
+}

@@ -1,6 +1,9 @@
 'use client';
 
 import { useState, FormEvent, useEffect } from 'react';
+import pagesContent from '@/data/pages-content.json';
+
+const content = pagesContent.contact;
 
 declare global {
   interface Window {
@@ -91,10 +94,10 @@ export default function ContactPage() {
       <section className="container mx-auto max-w-2xl px-4 py-24">
         <div className="mb-12 text-center">
           <h1 className="font-serif text-4xl font-bold tracking-tight text-stone-100 md:text-5xl">
-            Get in Touch
+            {content.pageTitle}
           </h1>
           <p className="mt-4 text-lg text-stone-400">
-            Questions about our speakers? Interested in a custom finish? We&apos;d love to hear from you.
+            {content.pageSubtitle}
           </p>
         </div>
 

@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { products } from '@/data/products';
+import pagesContent from '@/data/pages-content.json';
 
 const stands = products.filter(p => p.category === 'Stands');
+const content = pagesContent.stands;
 
 export default function StandsClient() {
     return (
@@ -26,7 +28,7 @@ export default function StandsClient() {
                         transition={{ duration: 0.8 }}
                         className="font-serif text-5xl font-medium text-white md:text-7xl"
                     >
-                        Stands
+                        {content.heroTitle}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -34,7 +36,7 @@ export default function StandsClient() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="mt-6 max-w-xl mx-auto text-lg text-stone-200"
                     >
-                        Engineered for acoustic control, designed for real living spaces.
+                        {content.heroSubtitle}
                     </motion.p>
                 </div>
             </section>
