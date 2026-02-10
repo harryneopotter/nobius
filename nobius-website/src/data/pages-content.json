@@ -1,5 +1,7 @@
 {
-    $1"Timeless sound, Thoughtful design, Soulful performance."
+    "speakers": {
+        "heroTitle": "Speakers",
+        "heroSubtitle": "Timeless sound, Thoughtful design, Soulful performance."
     },
     "stands": {
         "heroTitle": "Stands",
