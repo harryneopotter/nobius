@@ -226,8 +226,8 @@ export default function ContactPage() {
           <div className="mt-8 border-t border-stone-800 pt-8 text-center">
             <p className="text-sm text-stone-400">
               Prefer to email us directly? <br />
-              <a href="mailto:hello@nobiusaudio.com" className="font-medium text-stone-100 hover:underline">
-                hello@nobiusaudio.com
+              <a href="mailto:J@nobius.audio" className="font-medium text-stone-100 hover:underline">
+                J@nobius.audio
               </a>
             </p>
           </div>
