@@ -43,7 +43,9 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
             `I am interested in ordering the following product:\n\n` +
             `Product: ${product.name}\n` +
             `Category: ${product.category}\n` +
-            `Price: ${product.price}\n\n` +
+            `Price: ${product.price}\n` +
+            (product.priceTagline ? `Note: ${product.priceTagline}\n` : '') +
+            `\n` +
             `My Details:\n` +
             `Name: ${formData.name}\n` +
             `Email: ${formData.email}\n` +

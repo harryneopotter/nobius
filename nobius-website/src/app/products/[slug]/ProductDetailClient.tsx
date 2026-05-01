@@ -151,10 +151,15 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                                 {product.longDescription && <p>{product.longDescription}</p>}
                             </div>
 
-                            <div className="flex items-center justify-between border-t border-stone-800 py-6">
+                            <div className="flex flex-col border-t border-stone-800 py-6">
                                 <span className="text-3xl font-bold text-stone-100">
                                     {product.price}
                                 </span>
+                                {product.priceTagline && (
+                                    <p className="mt-4 text-sm leading-relaxed text-stone-400 italic">
+                                        {product.priceTagline}
+                                    </p>
+                                )}
                             </div>
 
                             <div className="flex flex-col gap-4 sm:flex-row">

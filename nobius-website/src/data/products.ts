@@ -17,6 +17,7 @@ export interface Product {
   features: string[];
   specs: ProductSpecs;
   specsText?: string;
+  priceTagline?: string;
 }
 
 // Import content from JSON files (separates content from code)
@@ -28,7 +29,7 @@ type PricesConfig = { [key: string]: string };
 const prices: PricesConfig = pricesData;
 
 // Merge product content with prices at build time
-export const products: Product[] = (productsContent as Product[]).map(product => ({
+export const products: Product[] = (productsContent as any[]).map(product => ({
   ...product,
   price: prices[product.id] || product.price || '$TBD'
 }));

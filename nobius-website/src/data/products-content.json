@@ -14,7 +14,8 @@
             "Baltic Birch cabinet"
         ],
         "specs": {},
-        "specsText": "19-liter sealed enclosure with Birch ply cabinet and MDF baffles (front and rear).\n8\" Woofer and 1\" silk dome tweeter\nDimensions: 10\" W x 14\" H x 9\" D\nNominal power handling: 5 to 50W\nMax power: Without N1-9B: 75W | With N1-9B: 200W\nResponse: 60Hz - 17Khz (+/- 3dB)\nBass extension: ~ 55Hz (-6dB)"
+        "specsText": "19-liter sealed enclosure with Birch ply cabinet and MDF baffles (front and rear).\n8\" Woofer and 1\" silk dome tweeter\nDimensions: 10\" W x 14\" H x 9\" D\nNominal power handling: 5 to 50W\nMax power: Without N1-9B: 75W | With N1-9B: 200W\nResponse: 60Hz - 17Khz (+/- 3dB)\nBass extension: ~ 55Hz (-6dB)",
+        "priceTagline": "With a selection of standard stain and finish on the ply and a selection of either vintage or modern crossover in an external box (one)"
     },
     {
         "id": "s2-5",
@@ -72,7 +73,8 @@
             "Compact footprint"
         ],
         "specs": {},
-        "specsText": "13-liter sealed MDF enclosure with CVD on panels.\n8\" woofer with 1\" poly dome tweeter.\nDimensions: 10\"W x 15\"H x 8\"D\nNominal power handling: 5 to 50W\nResponse: 55Hz - 17Khz (+/- 3dB)\nBass shelf from 80-120Hz\nBass extension: 50Hz (-6dB)"
+        "specsText": "13-liter sealed MDF enclosure with CVD on panels.\n8\" woofer with 1\" poly dome tweeter.\nDimensions: 10\"W x 15\"H x 8\"D\nNominal power handling: 5 to 50W\nResponse: 55Hz - 17Khz (+/- 3dB)\nBass shelf from 80-120Hz\nBass extension: 50Hz (-6dB)",
+        "priceTagline": "Includes standard veneer or paint finish with external crossover that allows for tweeter HF response adjustment"
     },
     {
         "id": "cable-riser",
