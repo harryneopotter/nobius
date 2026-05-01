@@ -81,6 +81,7 @@ interface ProductDetailClientProps {
 export default function ProductDetailClient({ product }: ProductDetailClientProps) {
     const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
     const [orderFormOpen, setOrderFormOpen] = useState(false);
+    const [selectedTier, setSelectedTier] = useState<'standard' | 'signature'>('standard');
 
     const openLightbox = useCallback((src: string) => setLightboxSrc(src), []);
     const closeLightbox = useCallback(() => setLightboxSrc(null), []);
@@ -151,10 +152,57 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                                 {product.longDescription && <p>{product.longDescription}</p>}
                             </div>
 
-                            <div className="flex items-center justify-between border-t border-stone-800 py-6">
-                                <span className="text-3xl font-bold text-stone-100">
-                                    {product.price}
-                                </span>
+                            {/* Pricing Tiers Selection */}
+                            {product.signaturePrice && (
+                                <div className="space-y-4">
+                                    <p className="text-sm font-bold uppercase tracking-wider text-stone-500">Select Series</p>
+                                    <div className="flex gap-4">
+                                        <button
+                                            onClick={() => setSelectedTier('standard')}
+                                            className={`flex-1 rounded-xl border p-4 text-left transition-all ${
+                                                selectedTier === 'standard'
+                                                    ? 'border-stone-100 bg-stone-100/5 ring-1 ring-stone-100'
+                                                    : 'border-stone-800 bg-transparent hover:border-stone-600'
+                                            }`}
+                                        >
+                                            <div className="flex items-center justify-between">
+                                                <span className="font-bold text-stone-100">Standard</span>
+                                                <span className="text-sm text-stone-400">{product.standardPrice}</span>
+                                            </div>
+                                        </button>
+                                        <button
+                                            onClick={() => setSelectedTier('signature')}
+                                            className={`flex-1 rounded-xl border p-4 text-left transition-all ${
+                                                selectedTier === 'signature'
+                                                    ? 'border-stone-100 bg-stone-100/5 ring-1 ring-stone-100'
+                                                    : 'border-stone-800 bg-transparent hover:border-stone-600'
+                                            }`}
+                                        >
+                                            <div className="flex items-center justify-between">
+                                                <span className="font-bold text-stone-100">Signature</span>
+                                                <span className="text-sm text-stone-400">{product.signaturePrice}</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className="flex flex-col border-t border-stone-800 py-6">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-3xl font-bold text-stone-100">
+                                        {selectedTier === 'standard' ? product.standardPrice || product.price : product.signaturePrice}
+                                    </span>
+                                    {product.signaturePrice && (
+                                        <span className="text-sm font-medium uppercase tracking-widest text-stone-500">
+                                            {selectedTier} Series
+                                        </span>
+                                    )}
+                                </div>
+                                {product.tierDetails && (
+                                    <p className="mt-4 text-sm leading-relaxed text-stone-400 italic">
+                                        {selectedTier === 'standard' ? product.tierDetails.standard : product.tierDetails.signature}
+                                    </p>
+                                )}
                             </div>
 
                             <div className="flex flex-col gap-4 sm:flex-row">
