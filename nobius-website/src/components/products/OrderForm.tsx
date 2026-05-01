@@ -16,7 +16,6 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
         phone: '',
         location: '',
     });
-    const [tier, setTier] = useState<'standard' | 'signature'>('standard');
 
     // Handle Escape key
     useEffect(() => {
@@ -38,19 +37,13 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        const tierLabel = product.signaturePrice ? ` (${tier.toUpperCase()} Series)` : '';
-        const priceValue = product.signaturePrice 
-            ? (tier === 'standard' ? product.standardPrice : product.signaturePrice)
-            : product.price;
-
-        const subject = encodeURIComponent(`Order Inquiry: ${product.name}${tierLabel}`);
+        const subject = encodeURIComponent(`Order Inquiry: ${product.name}`);
         const body = encodeURIComponent(
             `Hello Nobius Audio,\n\n` +
             `I am interested in ordering the following product:\n\n` +
             `Product: ${product.name}\n` +
-            `Series: ${product.signaturePrice ? tier.charAt(0).toUpperCase() + tier.slice(1) : 'Standard'}\n` +
             `Category: ${product.category}\n` +
-            `Price: ${priceValue}\n\n` +
+            `Price: ${product.price}\n\n` +
             `My Details:\n` +
             `Name: ${formData.name}\n` +
             `Email: ${formData.email}\n` +
@@ -60,7 +53,7 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
             `Thank you.`
         );
 
-        window.location.href = `mailto:J@nobius.audio?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:info@nobiusaudio.com?subject=${subject}&body=${body}`;
         onClose();
     };
 
@@ -99,39 +92,6 @@ export default function OrderForm({ product, isOpen, onClose }: OrderFormProps) 
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    {product.signaturePrice && (
-                        <div>
-                            <label className="block text-sm font-medium text-stone-300 mb-3">
-                                Select Series
-                            </label>
-                            <div className="flex gap-4">
-                                <button
-                                    type="button"
-                                    onClick={() => setTier('standard')}
-                                    className={`flex-1 flex flex-col items-start rounded-xl border p-3 transition-all ${
-                                        tier === 'standard'
-                                            ? 'border-stone-100 bg-stone-100/5 ring-1 ring-stone-100'
-                                            : 'border-stone-800 bg-stone-800/50 hover:border-stone-600'
-                                    }`}
-                                >
-                                    <span className={`text-xs font-bold uppercase tracking-wider ${tier === 'standard' ? 'text-stone-100' : 'text-stone-500'}`}>Standard</span>
-                                    <span className="text-sm text-stone-300">{product.standardPrice}</span>
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setTier('signature')}
-                                    className={`flex-1 flex flex-col items-start rounded-xl border p-3 transition-all ${
-                                        tier === 'signature'
-                                            ? 'border-stone-100 bg-stone-100/5 ring-1 ring-stone-100'
-                                            : 'border-stone-800 bg-stone-800/50 hover:border-stone-600'
-                                    }`}
-                                >
-                                    <span className={`text-xs font-bold uppercase tracking-wider ${tier === 'signature' ? 'text-stone-100' : 'text-stone-500'}`}>Signature</span>
-                                    <span className="text-sm text-stone-300">{product.signaturePrice}</span>
-                                </button>
-                            </div>
-                        </div>
-                    )}
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-stone-300 mb-2">
                             Full Name <span className="text-red-400">*</span>

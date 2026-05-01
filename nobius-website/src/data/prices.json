@@ -1,16 +1,8 @@
 {
-    "n1-9": {
-        "standard": "$1,599",
-        "signature": "$1,999"
-    },
-    "s2-5": {
-        "standard": "$2,199"
-    },
+    "n1-9": "$1599",
+    "s2-5": "$2199",
     "n1-9-bass": "$1,499",
-    "s1-2": {
-        "standard": "$1,099",
-        "signature": "$1,299"
-    },
+    "s1-2": "$1,099",
     "cable-riser": "$TBD",
     "speaker-riser": "$TBD",
     "spiral-stands": "$TBD",

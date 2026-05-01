@@ -14,11 +14,7 @@
             "Baltic Birch cabinet"
         ],
         "specs": {},
-        "specsText": "19-liter sealed enclosure with Birch ply cabinet and MDF baffles (front and rear).\n8\" Woofer and 1\" silk dome tweeter\nDimensions: 10\" W x 14\" H x 9\" D\nNominal power handling: 5 to 50W\nMax power: Without N1-9B: 75W | With N1-9B: 200W\nResponse: 60Hz - 17Khz (+/- 3dB)\nBass extension: ~ 55Hz (-6dB)",
-        "tierDetails": {
-            "standard": "Standard voicing with modern components.",
-            "signature": "Includes selection of vintage or modern crossover (one) for classic or contemporary presentation."
-        }
+        "specsText": "19-liter sealed enclosure with Birch ply cabinet and MDF baffles (front and rear).\n8\" Woofer and 1\" silk dome tweeter\nDimensions: 10\" W x 14\" H x 9\" D\nNominal power handling: 5 to 50W\nMax power: Without N1-9B: 75W | With N1-9B: 200W\nResponse: 60Hz - 17Khz (+/- 3dB)\nBass extension: ~ 55Hz (-6dB)"
     },
     {
         "id": "s2-5",
@@ -35,10 +31,7 @@
             "High power handling"
         ],
         "specs": {},
-        "specsText": "25-liter sealed MDF enclosure with floating baffle. Internal brace to dampen cabinet.\n8\" woofer and 1\" tweeter\nDimensions: 11\" W x 18\" H x 11\"D\nNominal power handling: 5 to 50W\nMax power: 75W\nResponse: 50Hz - 18Khz (+/- 3dB)\nBass extension: 45-48Hz (-6dB)",
-        "tierDetails": {
-            "standard": "Standard veneer or paint option included."
-        }
+        "specsText": "25-liter sealed MDF enclosure with floating baffle. Internal brace to dampen cabinet.\n8\" woofer and 1\" tweeter\nDimensions: 11\" W x 18\" H x 11\"D\nNominal power handling: 5 to 50W\nMax power: 75W\nResponse: 50Hz - 18Khz (+/- 3dB)\nBass extension: 45-48Hz (-6dB)"
     },
     {
         "id": "n1-9-bass",
@@ -79,11 +72,7 @@
             "Compact footprint"
         ],
         "specs": {},
-        "specsText": "13-liter sealed MDF enclosure with CVD on panels.\n8\" woofer with 1\" poly dome tweeter.\nDimensions: 10\"W x 15\"H x 8\"D\nNominal power handling: 5 to 50W\nResponse: 55Hz - 17Khz (+/- 3dB)\nBass shelf from 80-120Hz\nBass extension: 50Hz (-6dB)",
-        "tierDetails": {
-            "standard": "Standard veneer or paint option included.",
-            "signature": "Includes external crossover bed and standard veneer/paint options."
-        }
+        "specsText": "13-liter sealed MDF enclosure with CVD on panels.\n8\" woofer with 1\" poly dome tweeter.\nDimensions: 10\"W x 15\"H x 8\"D\nNominal power handling: 5 to 50W\nResponse: 55Hz - 17Khz (+/- 3dB)\nBass shelf from 80-120Hz\nBass extension: 50Hz (-6dB)"
     },
     {
         "id": "cable-riser",
