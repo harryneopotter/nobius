@@ -31,3 +31,23 @@ This document records the changes made to implement the multi-tier pricing syste
 
 ---
 *Note: These changes are recorded here for future reference before the codebase is reverted to its previous state.*
+
+---
+
+## Summary of Changes (Implemented on 2026-05-02) - Image Gallery Management via Telegram Bot
+
+This update adds the ability for the client to manage product image galleries directly through the Telegram bot.
+
+### 1. Data Structure Uniformity
+- **Products Content (`nobius-website/src/data/products-content.json`)**: Added an empty `"galleryImages": []` array to all product definitions that lacked it. This ensures a uniform schema across the catalog, allowing the bot's regular expression parser to work reliably.
+
+### 2. Bot Gallery Configuration
+- **Section Parsing (`telegram-bot/sections.js`)**: Configured the bot to recognize `gallery` sections for products `n1-9`, `s1-2`, and `s2-5`. 
+  - Added an `isGallery: true` flag.
+  - Implemented specific regex patterns to natively parse and stringify the JSON array representing the images.
+
+### 3. Telegram Bot Overhaul
+- **Image Operations (`telegram-bot/bot.js`)**: 
+  - **GitHub API Integration**: Added `safeGitHubFileUpload` to upload binary image buffers directly to `public/images/products/bot_uploads/` using the Octokit GitHub API.
+  - **Interactive UI**: Bypassed the standard text editor for gallery sections, instead rendering an inline keyboard menu to `➕ Add`, `🔄 Replace`, and `🗑️ Remove` pictures.
+  - **Photo Handling**: Updated the message handler to accept photos sent via Telegram, fetch their highest resolution version, upload them to the repository, and safely modify the JSON array structure in the queue.
